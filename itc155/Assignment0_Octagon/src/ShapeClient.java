@@ -86,7 +86,6 @@ public class ShapeClient {
 		System.out.println("The perimeter is " + dodecagon.getPerimeter());
 		System.out.println("The area is " + dodecagon.getArea());
 		System.out.println();
-		
 	}
 	
 	
