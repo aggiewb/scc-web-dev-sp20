@@ -71,7 +71,6 @@ public class ShapeClient {
 		System.out.println();
 	}
 	
-	
 	public static void mediumDodecagon() {
 		Shape dodecagon = new Dodecagon(50);
 		System.out.println(dodecagon);
@@ -88,6 +87,4 @@ public class ShapeClient {
 		System.out.println();
 	}
 	
-	
-
 }
