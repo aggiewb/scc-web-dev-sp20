@@ -16,7 +16,7 @@ class OctagonTest {
 	}
 	
 	@Test
-	void testMedium() {
+	void testMediumArea() {
 		Shape octagon = new Octagon(50);
 		Shape hexagon = new Hexagon(50);
 		Shape dodecagon = new Dodecagon(50);
@@ -27,7 +27,7 @@ class OctagonTest {
 	}
 	
 	@Test
-	void testLarge() {
+	void testLargeArea() {
 		Shape octagon = new Octagon(100);
 		Shape hexagon = new Hexagon(100);
 		Shape dodecagon = new Dodecagon(100);
