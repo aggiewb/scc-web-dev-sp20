@@ -8,9 +8,9 @@ var name = 'Molly';
 var welcomeMessage = greeting + name + '!';
 
 // Get the element that has an id of greeting
-var el = document.getElementById('greeting');
+var element = document.getElementById('greeting');
 
 // Replace the content of this element with the personal message
-el.textContent = welcomeMessage;
+element.textContent = welcomeMessage;
 
 // Note: textContent does not work in IE8 or earlier - see explanation on website
