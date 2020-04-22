@@ -8,9 +8,12 @@ public class Test_ArrayList {
 		names.add("Marty Stepp");
 		names.add("Stuart Reges");
 		names.add("Alana Turing");
-		names.add(2, "Ada Lovelace");
-		
 		System.out.print(names);
+		
+		names.add(2, "Ada Lovelace");
+		System.out.print(names);
+		
+	
 	}
 
 }
