@@ -3,7 +3,7 @@ Hint: Use prompt to get user input. You will need to store the user input in var
 Prompt returns a string, so you will need to convert the numbers to integers using ParseInt. */
 
 //Program description, user primpts, and input of user information
-var userName = window.prompt("Let's play the sum game. Please enter your name.");
+var userName = window.prompt("Let's play the sum game. \n Please enter your name");
 var userFirstNum = parseInt(window.prompt("Enter first number"), 10);
 var userSecondNum = parseInt(window.prompt("Enter second number"), 10);
 var userSum = userFirstNum + userSecondNum;
