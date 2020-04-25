@@ -3,11 +3,22 @@ Hint: Use prompt to get user input. You will need to store the user input in var
 Prompt returns a string, so you will need to convert the numbers to integers using ParseInt. */
 
 //Program description, user primpts, and input of user information
-var userName = window.prompt("Let's play the sum game. Please enter your name.");
-var userFirstNum = parseInt(window.prompt("Enter first number"), 10);
-var userSecondNum = parseInt(window.prompt("Enter second number"), 10);
-var userSum = userFirstNum + userSecondNum;
+var userName = window.prompt("Let's play the sum game. \n Please enter your name");
+var userFirstNum = window.prompt("Enter first number");
+var userSecondNum = window.prompt("Enter second number");
 
 //Output of user information to html element
 var sumGameMessage = document.getElementById("sum-game-message");
-sumGameMessage.textContent = "Hi " + userName + "! The sum of " + userFirstNum + " + " + userSecondNum + " is " + userSum;
+
+if(!userName || (!userFirstNum && userFirstNum !== 0) || (!userSecondNum && userSecondNum !== 0)){
+    sumGameMessage.textContent = "You must complete all three prompts to play the sum game";
+} else if(isNaN(userFirstNum) || isNaN(userSecondNum)){
+    sumGameMessage.textContent = "You must enter a numeric value in both number prompts to play the sum game";
+} else {
+    var userSum = parseInt(userFirstNum, 10) + parseInt(userSecondNum, 10);
+    sumGameMessage.textContent = "Hi " + userName + "! The sum of " + userFirstNum + " + " + userSecondNum + " is " + userSum;
+}
+
+
+
+
