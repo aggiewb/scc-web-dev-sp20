@@ -8,4 +8,4 @@ var getFirstNum = window.prompt("Enter first number");
 var getSecondNum = window.prompt("Enter second number");
 
 var sumGameMessage = document.getElementById("sum-game-message");
-sumGameMessage.textContent = ;
+sumGameMessage.textContent = "Hi " + getName + "! The sum of " + getFirstNum + " + " + getSecondNum + " is " + userSum;
