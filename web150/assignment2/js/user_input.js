@@ -10,14 +10,8 @@ var userSecondNum = window.prompt("Enter second number");
 //Output of user information to html element
 var sumGameMessage = document.getElementById("sum-game-message");
 
-if(!userName || (!userFirstNum && userFirstNum !== 0) || (!userSecondNum && userSecondNum !== 0)){
-    sumGameMessage.textContent = "You must complete all three prompts to play the sum game";
-} else if(isNaN(userFirstNum) || isNaN(userSecondNum)){
-    sumGameMessage.textContent = "You must enter a numeric value in both number prompts to play the sum game";
-} else {
-    var userSum = parseInt(userFirstNum, 10) + parseInt(userSecondNum, 10);
-    sumGameMessage.textContent = "Hi " + userName + "! The sum of " + userFirstNum + " + " + userSecondNum + " is " + userSum;
-}
+var userSum = parseInt(userFirstNum, 10) + parseInt(userSecondNum, 10);
+sumGameMessage.textContent = "Hi " + userName + "! The sum of " + userFirstNum + " + " + userSecondNum + " is " + userSum;
 
 
 
