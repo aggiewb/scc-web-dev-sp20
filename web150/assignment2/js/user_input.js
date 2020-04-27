@@ -11,7 +11,7 @@ var userSecondNum = window.prompt("Enter second number");
 var sumGameMessage = document.getElementById("sum-game-message");
 var userSum = parseInt(userFirstNum, 10) + parseInt(userSecondNum, 10);
 
-sumGameMessage.textContent = "Hi " + userName + "! The sum of " + userFirstNum + " + " + userSecondNum + " is " + userSum;
+sumGameMessage.textContent = "Hi, " + userName + "! The sum of " + userFirstNum + " + " + userSecondNum + " is " + userSum;
 
 
 
