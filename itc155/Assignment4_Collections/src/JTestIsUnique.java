@@ -5,7 +5,12 @@ import org.junit.jupiter.api.Test;
 class JTestIsUnique {
 
 	@Test
-	void test() {
+	void testFalse() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void testTrue() {
 		fail("Not yet implemented");
 	}
 
