@@ -25,5 +25,11 @@ class JTestIsUnique {
 		names.put("Hal", "Perkins");
 		assertEquals(false, Unique.isUnique(names));
 	}
+	
+	@Test
+	void testEmpty() {
+		Map<String, String> names = new HashMap<>();
+		assertEquals(true, Unique.isUnique(names));
+	}
 
 }
