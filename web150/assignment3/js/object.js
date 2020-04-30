@@ -33,42 +33,42 @@ var judah = new Profile("Judah", 42, "Los Angeles, CA");
 jack.like();
 jack.like();
 jack.like();
+//Jill like() one time
+jill.like();
 //Jack like() two times
 judah.like();
 judah.like();
-//Jill like() one time
-jill.like();
 
 //Call dislike() method to demonstrate its use
 //Jack, Judah, Jill, and Carolyn dislike() one time each
 jack.dislike();
-judah.dislike();
 jill.dislike();
 carolyn.dislike();
+judah.dislike();
 
 //Display name, age, and location object instance properties
 //Use of innerHTML() does not have security risks due to no user input being set to innerHTML property
 document.getElementById("jack").innerHTML = jack.name + ", " + jack.age + "<br>" + jack.location;
 document.getElementById("jill").innerHTML = jill.name + ", " + jill.age + "<br>" + jill.location;
-document.getElementById("judah").innerHTML = judah.name + ", " + judah.age + "<br>" + judah.location;
 document.getElementById("carolyn").innerHTML = carolyn.name + ", " + carolyn.age + "<br>" + carolyn.location;
+document.getElementById("judah").innerHTML = judah.name + ", " + judah.age + "<br>" + judah.location;
 
 //Add an hobbies property
 jack.hobbies = ["skating", "brewing beer", "ballet"];
 jill.hobbies = ["programming JS"];
-judah.hobbies = ["biking", "playing guitar"];
 carolyn.hobbies = ["baking pastries, trying new cocktails, watching reruns of 90s sitcoms"]
+judah.hobbies = ["biking", "playing guitar"];
 
 //Display hobbies object instance property
 //Use of innerHTML() does not have security risks due to no user input being set to innerHTML property
 document.getElementById("jack-hobbies").innerHTML = "Hobbies: " + jack.hobbies[0] + ", " + jack.hobbies[1] + ", " + jack.hobbies[2];
 document.getElementById("jill-hobbies").innerHTML = "Hobbies: " +  jill.hobbies[0];
-document.getElementById("judah-hobbies").innerHTML = "Hobbies: " +  judah.hobbies[0] + ", " + judah.hobbies[1];
 document.getElementById("carolyn-hobbies").innerHTML = "Hobbies: " +  carolyn.hobbies[0], + ", " + carolyn.hobbies[1] + ", " + carolyn.hobbies[2];
-
+document.getElementById("judah-hobbies").innerHTML = "Hobbies: " +  judah.hobbies[0] + ", " + judah.hobbies[1];
 
 //Display totalLikes  hobbies object instance property
 document.getElementById("jack-likes").textContent = "Total Likes: " + jack.totalLikes;
 document.getElementById("jill-likes").textContent = "Total Likes: " + jill.totalLikes;
-document.getElementById("judah-likes").textContent = "Total Likes: " + judah.totalLikes;
 document.getElementById("carolyn-likes").textContent = "Total Likes: " + carolyn.totalLikes;
+document.getElementById("judah-likes").textContent = "Total Likes: " + judah.totalLikes;
+
