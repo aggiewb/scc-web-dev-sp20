@@ -14,10 +14,10 @@ function Profile(name, age, location){
     this.location = location;
     this.totalLikes = 0;
     this.like = function(){
-        this.like++;
+        this.totalLikes++;
     };
     this.dislike = function(){
-        this.like--;
+        this.totalLikes--;
     };
 }
 
@@ -44,3 +44,17 @@ jack.dislike();
 judah.dislike();
 jill.dislike();
 carolyn.dislike();
+
+//Display object instance properties, values, and method results
+//Use of innerHTML() does not have security risks due to no user input being set to innerHTML property
+document.getElementById("jack").innerHTML = jack.name + ", " + jack.age + "<br>" + jack.location;
+document.getElementById("jack-likes").textContent = "Total Likes: " + jack.totalLikes;
+
+document.getElementById("jill").innerHTML = jill.name + ", " + jill.age + "<br>" + jill.location;
+document.getElementById("jill-likes").textContent = "Total Likes: " + jill.totalLikes;
+
+document.getElementById("judah").innerHTML = judah.name + ", " + judah.age + "<br>" + judah.location;
+document.getElementById("judah-likes").textContent = "Total Likes: " + judah.totalLikes;
+
+document.getElementById("carolyn").innerHTML = carolyn.name + ", " + carolyn.age + "<br>" + carolyn.location;
+document.getElementById("carolyn-likes").textContent = "Total Likes: " + carolyn.totalLikes;
