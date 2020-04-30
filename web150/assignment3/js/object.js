@@ -1,4 +1,5 @@
-/* For this assignment you will model an object of your choosing and interest and code it in JavaScript. For example, you could code a Student, Product object,  etc… Objects we coded in class will not count.
+/* For this assignment you will model an object of your choosing and interest and code it in JavaScript. 
+For example, you could code a Student, Product object, etc… Objects we coded in class will not count.
 
 Requirements:
 Use the constructor notation to create a “template” for the object. 25 points
