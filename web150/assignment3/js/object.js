@@ -21,3 +21,8 @@ function Profile(name, age, location){
     };
 }
 
+//Construct profile object instances
+var jack = new Profile("Jack", 21, "Seattle, WA");
+var jill = new Profile("Jill", 25, "Portland, OR");
+var carolyn = new Profile("Carolyn", 46, "Los Angeles, CA");
+var judah = new Profile("Judah", 42, "Los Angeles, CA");
