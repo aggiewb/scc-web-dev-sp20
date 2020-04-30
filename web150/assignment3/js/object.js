@@ -26,3 +26,21 @@ var jack = new Profile("Jack", 21, "Seattle, WA");
 var jill = new Profile("Jill", 25, "Portland, OR");
 var carolyn = new Profile("Carolyn", 46, "Los Angeles, CA");
 var judah = new Profile("Judah", 42, "Los Angeles, CA");
+
+//Call like() method to demonstrate its use
+//Jack like() three times
+jack.like();
+jack.like();
+jack.like();
+//Jack like() two times
+judah.like();
+judah.like();
+//Jill like() one time
+jill.like();
+
+//Call dislike() method to demonstrate its use
+//Jack, Judah, Jill, and Carolyn dislike() one time each
+jack.dislike();
+judah.dislike();
+jill.dislike();
+carolyn.dislike();
