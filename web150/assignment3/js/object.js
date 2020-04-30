@@ -53,7 +53,7 @@ document.getElementById("jill").innerHTML = jill.name + ", " + jill.age + "<br>"
 document.getElementById("carolyn").innerHTML = carolyn.name + ", " + carolyn.age + "<br>" + carolyn.location;
 document.getElementById("judah").innerHTML = judah.name + ", " + judah.age + "<br>" + judah.location;
 
-//Add an hobbies property
+//Add a hobbies property
 jack.hobbies = ["skating", "brewing beer", "ballet"];
 jill.hobbies = ["programming JS"];
 carolyn.hobbies = ["baking pastries, trying new cocktails, watching reruns of 90s sitcoms"]
@@ -66,7 +66,7 @@ document.getElementById("jill-hobbies").innerHTML = "Hobbies: " +  jill.hobbies[
 document.getElementById("carolyn-hobbies").innerHTML = "Hobbies: " +  carolyn.hobbies[0], + ", " + carolyn.hobbies[1] + ", " + carolyn.hobbies[2];
 document.getElementById("judah-hobbies").innerHTML = "Hobbies: " +  judah.hobbies[0] + ", " + judah.hobbies[1];
 
-//Display totalLikes  hobbies object instance property
+//Display totalLikes hobbies object instance property
 document.getElementById("jack-likes").textContent = "Total Likes: " + jack.totalLikes;
 document.getElementById("jill-likes").textContent = "Total Likes: " + jill.totalLikes;
 document.getElementById("carolyn-likes").textContent = "Total Likes: " + carolyn.totalLikes;
