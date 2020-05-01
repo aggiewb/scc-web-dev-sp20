@@ -60,11 +60,10 @@ carolyn.hobbies = ["baking pastries, trying new cocktails, watching reruns of 90
 judah.hobbies = ["biking", "playing guitar"];
 
 //Display hobbies object instance property
-//Use of innerHTML() does not have security risks due to no user input being set to innerHTML property
-document.getElementById("jack-hobbies").innerHTML = "Hobbies: " + jack.hobbies[0] + ", " + jack.hobbies[1] + ", " + jack.hobbies[2];
-document.getElementById("jill-hobbies").innerHTML = "Hobbies: " +  jill.hobbies[0];
-document.getElementById("carolyn-hobbies").innerHTML = "Hobbies: " +  carolyn.hobbies[0], + ", " + carolyn.hobbies[1] + ", " + carolyn.hobbies[2];
-document.getElementById("judah-hobbies").innerHTML = "Hobbies: " +  judah.hobbies[0] + ", " + judah.hobbies[1];
+document.getElementById("jack-hobbies").textContent = "Hobbies: " + jack.hobbies[0] + ", " + jack.hobbies[1] + ", " + jack.hobbies[2];
+document.getElementById("jill-hobbies").textContent = "Hobbies: " +  jill.hobbies[0];
+document.getElementById("carolyn-hobbies").textContent = "Hobbies: " +  carolyn.hobbies[0], + ", " + carolyn.hobbies[1] + ", " + carolyn.hobbies[2];
+document.getElementById("judah-hobbies").textContent = "Hobbies: " +  judah.hobbies[0] + ", " + judah.hobbies[1];
 
 //Display totalLikes hobbies object instance property
 document.getElementById("jack-likes").textContent = "Total Likes: " + jack.totalLikes;
