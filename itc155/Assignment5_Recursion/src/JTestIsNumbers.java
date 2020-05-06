@@ -3,7 +3,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import org.junit.jupiter.api.Test;
 
-class JTestIsNumbers {
+class JTestIsNumbers extends Numbers{
 	@Test
 	void testZero() {
 		// () -> A Java lambda expression can be passed around as if it was an object and executed on demand.
