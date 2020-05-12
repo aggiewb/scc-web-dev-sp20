@@ -1,7 +1,7 @@
 
 public class Numbers {
 	
-	public static void writeNums(int n){
+	public void writeNums(int n){
 	    if(n < 1){
 	        throw new IllegalArgumentException();
 	    }
