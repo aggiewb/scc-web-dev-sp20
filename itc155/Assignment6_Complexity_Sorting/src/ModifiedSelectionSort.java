@@ -24,8 +24,8 @@
  *     return result;
  * }
  * 
- * Answer: O(2N) The single loop N with a body containing 2(K) simple statements with a single 
- * statement(K) outside the loop. A loop with a body that contains K simple statements and that 
+ * Answer: O(2N + 2) The single loop N with a body containing 2(K) simple statements with 2(K) simple 
+ * statements outside the loop. A loop with a body that contains K simple statements and that 
  * repeats N times will have a runtime of roughly (K * N).
  */
 
