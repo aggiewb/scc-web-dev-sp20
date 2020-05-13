@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class ModifiedSelectionSortTest {
 
 	@Test
-	void test() {
+	void testFull() {
 		int[] nums = {2, 5, 23, 5, 1, 0, 23, 6, 9};
 		int[] checkNums = {0, 1, 2, 5, 5, 6, 9, 23, 23};
 		ModifiedSelectionSort sort = new ModifiedSelectionSort();
