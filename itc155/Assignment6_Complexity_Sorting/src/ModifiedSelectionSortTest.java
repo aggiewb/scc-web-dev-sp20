@@ -6,8 +6,8 @@ class ModifiedSelectionSortTest {
 
 	@Test
 	void test() {
-		int[] nums = {2, 5, 5, 1, 0};
-		int[] checkNums = {0, 1, 2, 5, 5};
+		int[] nums = {2, 5, 23, 5, 1, 0, 23, 6, 9};
+		int[] checkNums = {0, 1, 2, 5, 5, 6, 9, 23, 23};
 		ModifiedSelectionSort sort = new ModifiedSelectionSort();
 		sort.selectionSort(nums);
 		assertArrayEquals(checkNums, nums);
