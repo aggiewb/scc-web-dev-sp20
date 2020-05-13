@@ -37,4 +37,24 @@
  * (big-Oh) be? */
 
 public class ModifiedSelectionSort {
+	public void selectionSort(int[] arr) {
+		for(int i = arr.length - 1; i > 0; i--) {
+			int largest = i;
+			for(int j = i - 1; j >= 0; j--) {
+				if(arr[largest] < arr[j]) {
+					largest = j;
+				}
+			}
+			
+			if(largest != i) {
+				swap(arr, i, largest);	
+			}	
+		}
+	}
+	
+	private static void swap(int[] arr, int i, int largest) {
+		int temp = arr[i];
+		arr[i] = arr[largest];
+		arr[largest] = temp;
+	}
 }
