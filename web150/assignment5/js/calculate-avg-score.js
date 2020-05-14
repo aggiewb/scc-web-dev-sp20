@@ -19,3 +19,5 @@ function avgScore(scoreArray){
     window.alert("Average score is " + averageScore);
 }
 
+var scores = getScore();
+avgScore(scores);
