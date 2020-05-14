@@ -24,9 +24,11 @@
  *     return result;
  * }
  * 
- * Answer: O(N) The single loop N with a body containing 2(K) simple statements with 2(K) simple 
- * statements outside the loop. A loop with a body that contains K simple statements and that 
- * repeats N times will have a runtime of roughly (K * N).
+ * Answer: The complexity class is O(N). The single loop N with a body containing 2(K) simple 
+ * statements with 2(K) simple statements outside the loop. A loop with a body that contains K 
+ * simple statements and that repeats N times will have a runtime of roughly (K * N). The simple 
+ * statements include new array initializing with the elements of the new array are initialized 
+ * to a default initial value and the other statements are variable assignments.
  */
 
 
