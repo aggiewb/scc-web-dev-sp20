@@ -24,7 +24,7 @@
  *     return result;
  * }
  * 
- * Answer: O(2N + 2) The single loop N with a body containing 2(K) simple statements with 2(K) simple 
+ * Answer: O(N) The single loop N with a body containing 2(K) simple statements with 2(K) simple 
  * statements outside the loop. A loop with a body that contains K simple statements and that 
  * repeats N times will have a runtime of roughly (K * N).
  */
@@ -34,7 +34,8 @@
  * largest element each time and moves it to the end of the array, rather than selecting the 
  * smallest element and moving it to the beginning.
  * Will this sort be faster than the standard selection sort, and what will the complexity class
- * (big-Oh) be? */
+ * (big-Oh) be? The complexity class of the modified version would O(N^2), which isn't any faster
+ * than the standard. */
 
 public class ModifiedSelectionSort {
 	public void selectionSort(int[] arr) {
