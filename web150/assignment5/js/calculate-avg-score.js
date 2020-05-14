@@ -10,3 +10,12 @@ function getScore() {
     return scores;
 }
 
+function avgScore(scoreArray){
+    var scoreSum = 0;
+    for(var i = 0; i < scores.length; i++){
+        scoreSum += scoreArray[i];
+    }
+    var averageScore = scoreSum / scoreArray.length;
+    window.alert("Average score is " + averageScore);
+}
+
