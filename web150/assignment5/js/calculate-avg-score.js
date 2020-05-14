@@ -21,6 +21,10 @@
         }
 
         var averageScore = scoreSum / scoreArray.length;
+        if(scoreSum % scoreArray.length !== 0){
+            averageScore = averageScore.toFixed(2);
+        }
+        
         window.alert("Average score is " + averageScore);
     }
 
