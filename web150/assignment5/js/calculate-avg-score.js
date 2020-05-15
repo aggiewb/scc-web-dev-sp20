@@ -1,12 +1,14 @@
 (function() {
     //Function to get individual user scores, which are stored in an array, and returns array.
     function getScore() {
-        var score = parseInt(window.prompt("Enter test score\nOr enter 999 to end entries"));
         var scores = [];
+        var doneNum = 999;
+        var score = parseInt(window.prompt("Enter test score\nOr enter " + doneNum + " to end entries"));
+        
 
-        for(var i = 0; score !== 999; i++){
+        for(var i = 0; score !== doneNum; i++){
             scores[i] = score;
-            score = parseInt(window.prompt("Enter test score\nOr enter 999 to end entries"));
+            score = parseInt(window.prompt("Enter test score\nOr enter " + doneNum + " to end entries"));
         }
 
         return scores;
