@@ -1,16 +1,3 @@
-/* pg. 888 exercise 3
- * Suppose the following array has been declared:
- * index            0  1  2  3   4   5   6   7   8   9   10  11  12  13  14
- * int[] numbers = {0, 0, 5, 10, 15, 40, 55, 60, 65, 70, 80, 85, 90, 95, 300}; 
- * What indexes will be examined as the middle element by a binary search for each
- * of the following target values?
- * a. 65 Answer: 7, 11, 9, 8 return index 8 value 65
- * b. 9 Answer: 7, 3, 1, 2 return -4
- * c. 90 Answer: 7, 11, 13, 12 return index 12 value 90
- * d. 147 Answer: 7, 11, 13, 14 return -15
- * */
-
-
 /* pg. 888 exercise 4
  * To which complexity class does the following algorithm belong? Consider N to be the
  * length or size of the array or collection passed to the method. Explain your reasoning.
@@ -25,10 +12,28 @@
  * }
  * 
  * Answer: The complexity class is O(N). The single loop N with a body containing 2(K) simple 
- * statements with 2(K) simple statements outside the loop. A loop with a body that contains K 
- * simple statements and that repeats N times will have a runtime of roughly (K * N). The simple 
- * statements include new array initializing with the elements of the new array are initialized 
- * to a default initial value and the other statements are variable assignments.
+ * statements with 2(K) simple statements outside the loop. The simple statements include new 
+ * array initializing with the elements of the new array are initialized to a default initial 
+ * value and the other statements are variable assignments.  A loop with a body that contains K 
+ * simple statements and that repeats N times will have a runtime of roughly (K * N), and have 
+ * a fixed amount of time to execute.
+ */
+
+/* pg. 888 exercise 5
+ * To which complexity class does the following algorithm belong?
+ * public static void mystery2(int[] list){
+ *     for(int i = 0; i < list.length / 2; i++){
+ *         int j = list.length - 1 - i;
+ *         int temp = list[i];
+ *         list[i] = list[j];
+ *         list[j] = temp;
+ *     }
+ * }
+ * 
+ * Answer: The complexity class is O(N). The single loop N which is iterated 1/2 N is considered
+ * just N and the 4(k) statements include variable and index assignments, which are simple statements. 
+ * A loop with a body that contains K simple statements and that repeats N times will have a runtime 
+ * of roughly (K * N), and have a fixed amount of time to execute.
  */
 
 
