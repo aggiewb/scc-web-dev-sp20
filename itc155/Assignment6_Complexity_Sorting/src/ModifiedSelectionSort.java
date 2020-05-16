@@ -5,7 +5,7 @@
  * What indexes will be examined as the middle element by a binary search for each
  * of the following target values?
  * a. 65 Answer: 7, 11, 9, 8 return index 8 value 65
- * b. 9 Answer: 7, 3, 1, 2, 3 return -4
+ * b. 9 Answer: 7, 3, 1, 2 return -4
  * c. 90 Answer: 7, 11, 13, 12 return index 12 value 90
  * d. 147 Answer: 7, 11, 13, 14 return -15
  * */
