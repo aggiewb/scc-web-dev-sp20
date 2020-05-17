@@ -16,8 +16,13 @@ public class PhotoLineups {
 	ArrayList<String> nameList = new ArrayList<String>();
 	ArrayList<String> permutationList = new ArrayList<String>();
 	String name;
-
-	// TODO: Read in a list of names; stop when -1 is read. Then call recursive method.
+	String stopRead = "-1";
+	
+	name = input.next();
+	while(name != stopRead) {
+		nameList.add(name);
+		name = input.next();
+	}	
 	}
 
 }
