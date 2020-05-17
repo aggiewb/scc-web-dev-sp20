@@ -7,6 +7,14 @@ import java.util.ArrayList;
 
 public class PhotoLineups {
 	public static void allPermutations(ArrayList<String> permList, ArrayList<String> nameList) {
+		if(nameList.size() == 2) {
+			
+		} else {
+			for(int i = 0; i < nameList.size(); i++) {
+				
+			}
+			allPermutations(permList, nameList);
+		}
 
 	}
 
