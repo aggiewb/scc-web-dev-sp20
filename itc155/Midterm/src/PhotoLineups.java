@@ -6,7 +6,6 @@ import java.util.ArrayList;
  * all possible orderings of those names,one ordering per line. */
 
 public class PhotoLineups {
-	// TODO: Write method to create and output all permutations of the list of names.
 	public static void allPermutations(ArrayList<String> permList, ArrayList<String> nameList) {
 
 	}
@@ -14,7 +13,7 @@ public class PhotoLineups {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		ArrayList<String> nameList = new ArrayList<String>();
-		ArrayList<String> permutationList = new ArrayList<String>();
+		ArrayList<String> permList = new ArrayList<String>();
 		String name;
 		String stopRead = "-1";
 		
@@ -25,7 +24,7 @@ public class PhotoLineups {
 		}
 		input.close();
 		
-		allPermutations(permutationList, nameList);
+		allPermutations(permList, nameList);
 		
 	}
 
