@@ -17,14 +17,14 @@ public class DescendingOrder {
 
 
 	public static void main(String[] args) {
-	Scanner scnr = new Scanner(System.in);
-
-	int input, i = 0;
-	int numElements = 0;
-	int [] numbers = new int[10];
-
-	// TODO: Read in a list of up to 10 positive integers; stop when
-	// -1 is read. Then call selectionSortDescendTrace() method.
+		Scanner scnr = new Scanner(System.in);
+	
+		int input, i = 0;
+		int numElements = 0;
+		int [] numbers = new int[10];
+	
+		// TODO: Read in a list of up to 10 positive integers; stop when
+		// -1 is read. Then call selectionSortDescendTrace() method.
 
 	}
 

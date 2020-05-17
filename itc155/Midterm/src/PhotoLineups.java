@@ -12,17 +12,17 @@ public class PhotoLineups {
 	}
 
 	public static void main(String[] args) {
-	Scanner input = new Scanner(System.in);
-	ArrayList<String> nameList = new ArrayList<String>();
-	ArrayList<String> permutationList = new ArrayList<String>();
-	String name;
-	String stopRead = "-1";
-	
-	name = input.next();
-	while(name != stopRead) {
-		nameList.add(name);
+		Scanner input = new Scanner(System.in);
+		ArrayList<String> nameList = new ArrayList<String>();
+		ArrayList<String> permutationList = new ArrayList<String>();
+		String name;
+		String stopRead = "-1";
+		
 		name = input.next();
-	}	
+		while(name != stopRead) {
+			nameList.add(name);
+			name = input.next();
+		}	
 	}
 
 }
