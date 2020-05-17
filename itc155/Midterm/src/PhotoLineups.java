@@ -23,6 +23,7 @@ public class PhotoLineups {
 			nameList.add(name);
 			name = input.next();
 		}
+		input.close();
 		
 		allPermutations(permutationList, nameList);
 		
