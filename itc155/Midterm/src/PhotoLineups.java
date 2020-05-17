@@ -6,34 +6,37 @@ import java.util.ArrayList;
  * all possible orderings of those names,one ordering per line. */
 
 public class PhotoLineups {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		ArrayList<String> nameList = new ArrayList<String>();
+		ArrayList<String> permList = new ArrayList<String>();
+		
+		System.out.print("Enter a list of names, and enter -1 at the end of the list to quit: ");
+		String name = input.next();
+		nameList.add(name);
+		
+		while(!input.hasNextInt()) {
+			name = input.next();
+			nameList.add(name);
+		}
+		
+		input.close();
+		
+		allPermutations(permList, nameList);
+	
+	}
+	
 	public static void allPermutations(ArrayList<String> permList, ArrayList<String> nameList) {
 		if(nameList.size() == 2) {
 			
 		} else {
 			for(int i = 0; i < nameList.size(); i++) {
-				
+				nameList.remove(i);
+				allPermutations(permList, nameList);
+				permList.add(i, nameList.get(i));
 			}
-			allPermutations(permList, nameList);
 		}
 
-	}
-
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		ArrayList<String> nameList = new ArrayList<String>();
-		ArrayList<String> permList = new ArrayList<String>();
-		String name;
-		String stopRead = "-1";
-		
-		name = input.next();
-		while(name != stopRead) {
-			nameList.add(name);
-			name = input.next();
-		}
-		input.close();
-		
-		allPermutations(permList, nameList);
-		
 	}
 
 }
