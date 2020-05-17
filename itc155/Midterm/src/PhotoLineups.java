@@ -22,7 +22,10 @@ public class PhotoLineups {
 		while(name != stopRead) {
 			nameList.add(name);
 			name = input.next();
-		}	
+		}
+		
+		allPermutations(permutationList, nameList);
+		
 	}
 
 }
