@@ -31,23 +31,12 @@ public class StudentGrades {
 		studentName = input.next() + " " + input.next();
 		
 		while(!studentName.equals(exit)) {
-			
-			if(studentGrades.containsKey(studentName)) {
-				System.out.println(studentName + "\'s original grade: " + studentGrades.get(studentName));
-			} else {
-				System.out.println(studentName + " is not currently in this class, but has been added.");
-			}
+			System.out.println(studentName + "\'s original grade: " + studentGrades.get(studentName));
 			
 			System.out.print("Type " + studentName + "\'s new grade: ");
 			double studentGrade = input.nextDouble();
-			
-			if(studentGrades.containsKey(studentName)) {
-				studentGrades.replace(studentName, studentGrade);
-				System.out.println(studentName + "\'s new grade: " + studentGrades.get(studentName));
-			} else {
-				studentGrades.put(studentName, studentGrade);
-				System.out.println("Added new student: " + studentName + " with a grade of: " + studentGrades.get(studentName));
-			}
+		    studentGrades.replace(studentName, studentGrade);
+		    System.out.println(studentName + "\'s new grade: " + studentGrades.get(studentName));
 			
 			System.out.print("Type another student's name. Type " + exit + " to finish: ");
 			studentName = input.next() + " " + input.next();	
