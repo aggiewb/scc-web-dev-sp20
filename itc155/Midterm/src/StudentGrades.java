@@ -40,9 +40,9 @@ public class StudentGrades {
 			
 			System.out.print("Type " + studentName + "\'s new grade: ");
 			double studentGrade = input.nextDouble();
-			studentGrades.replace(studentName, studentGrade);
 			
 			if(studentGrades.containsKey(studentName)) {
+				studentGrades.replace(studentName, studentGrade);
 				System.out.println(studentName + "\'s new grade: " + studentGrades.get(studentName));
 			} else {
 				studentGrades.put(studentName, studentGrade);
