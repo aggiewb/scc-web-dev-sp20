@@ -7,10 +7,7 @@ and then reading in and outputting their new grade. */
 
 public class StudentGrades {
 	public static void main (String[] args) {
-		Scanner input = new Scanner(System.in);
-		String studentName;
-		double studentGrade;
-
+		
 		HashMap<String, Double> studentGrades = new HashMap<String, Double>();
 
 		// Students's grades (pre-entered)
@@ -20,9 +17,37 @@ public class StudentGrades {
 		studentGrades.put("Quincy Wraight", 65.4);
 		studentGrades.put("Janine Antinori", 98.2);
 
-		// TODO: Read in new grade for a student, output initial
-		// grade, replace with new grade in HashMap,
-		// output new grade
+		changeGrades(studentGrades);
+	
+		System.out.println(studentGrades.toString());
+		
+	}
+	
+	private static void changeGrades(HashMap<String, Double> studentGrades) {
+		Scanner input = new Scanner(System.in);
+		String studentName = "";
+		System.out.print("Type student's name. Type done to finish: ");
+		studentName = input.next() + " " + input.next();
+		
+		while(!studentName.equals("exit now")) {
+			System.out.println(studentName + "\'s original grade: " + studentGrades.get(studentName));
+			System.out.print("Type " + studentName + "\'s new grade: ");
+			double studentGrade = input.nextDouble();
+			studentGrades.replace(studentName, studentGrade);
+			
+			if(studentGrades.containsKey(studentName)) {
+				System.out.println(studentName + "\'s new grade: " + studentGrades.get(studentName));
+			} else {
+				studentGrades.put(studentName, studentGrade);
+				System.out.println("Added new student: " + studentName + " with a grade of: " + studentGrades.get(studentName));
+			}
+			
+			System.out.print("Type another student's name. Type exit now to finish: ");
+			studentName = input.next() + " " + input.next();	
+		}
+		
+		input.close();
+		
 	}
 	
 }
