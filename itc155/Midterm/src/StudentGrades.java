@@ -19,17 +19,18 @@ public class StudentGrades {
 
 		changeGrades(studentGrades);
 	
-		System.out.println(studentGrades.toString());
+		System.out.println("Entire class with grades: " + studentGrades.toString());
 		
 	}
 	
 	private static void changeGrades(HashMap<String, Double> studentGrades) {
 		Scanner input = new Scanner(System.in);
 		String studentName = "";
-		System.out.print("Type student's name. Type done to finish: ");
+		String exit = "exit now";
+		System.out.print("Type student's name. Type " + exit + " to finish: ");
 		studentName = input.next() + " " + input.next();
 		
-		while(!studentName.equals("exit now")) {
+		while(!studentName.equals(exit)) {
 			System.out.println(studentName + "\'s original grade: " + studentGrades.get(studentName));
 			System.out.print("Type " + studentName + "\'s new grade: ");
 			double studentGrade = input.nextDouble();
@@ -42,7 +43,7 @@ public class StudentGrades {
 				System.out.println("Added new student: " + studentName + " with a grade of: " + studentGrades.get(studentName));
 			}
 			
-			System.out.print("Type another student's name. Type exit now to finish: ");
+			System.out.print("Type another student's name. Type " + exit + " to finish: ");
 			studentName = input.next() + " " + input.next();	
 		}
 		
