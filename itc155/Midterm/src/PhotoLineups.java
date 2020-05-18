@@ -23,20 +23,41 @@ public class PhotoLineups {
 		input.close();
 		
 		allPermutations(permList, nameList);
+		for(String perm : permList) {
+			System.out.println(perm);
+		}
 	
 	}
 	
 	public static void allPermutations(ArrayList<String> permList, ArrayList<String> nameList) {
-		if(nameList.size() == 2) {
-			
-		} else {
-			for(int i = 0; i < nameList.size(); i++) {
-				nameList.remove(i);
-				allPermutations(permList, nameList);
-				permList.add(i, nameList.get(i));
-			}
-		}
-
+		permutationsHelper(permList, nameList, 0, nameList.size() - 1);
 	}
-
+	
+	private static void permutationsHelper(ArrayList<String> permList, ArrayList<String> nameList, int startIndex, int endIndex) {
+		//Adds a string of names representing a permutation to the permList
+		 if(startIndex == endIndex) {
+			 String namesPerm = "";
+			 for(String name : nameList) {
+				 namesPerm+=name + " ";
+			 }
+			 
+			 //Don't remove duplicate names permutation because they represent unique people.
+			 permList.add(namesPerm);
+			 
+		 } else { 
+			 for(int i = startIndex; i <= endIndex; i++) {
+				 //Only swaps when startIndex and i are the different
+				 swap(nameList, startIndex, i); 
+	             permutationsHelper(permList, nameList, startIndex + 1, endIndex);
+	             //Reverse name swaps
+	             swap(nameList, startIndex, i);
+			 }
+		 }
+	}
+	
+	private static void swap(ArrayList<String> arr, int start, int i) {
+		String temp = arr.get(start);
+		arr.set(start, arr.get(i));
+		arr.set(i, temp);
+	}
 }
