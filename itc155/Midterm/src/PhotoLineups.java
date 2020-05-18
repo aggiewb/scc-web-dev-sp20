@@ -46,10 +46,9 @@ public class PhotoLineups {
 			 
 		 } else { 
 			 for(int i = startIndex; i <= endIndex; i++) {
-				 //Only swaps when startIndex and i are the different
+				 //Swap each element with each element after it with backtracking
 				 swap(nameList, startIndex, i); 
 	             permutationsHelper(permList, nameList, startIndex + 1, endIndex);
-	             //Reverse name swaps
 	             swap(nameList, startIndex, i);
 			 }
 		 }
