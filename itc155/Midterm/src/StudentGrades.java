@@ -31,7 +31,13 @@ public class StudentGrades {
 		studentName = input.next() + " " + input.next();
 		
 		while(!studentName.equals(exit)) {
-			System.out.println(studentName + "\'s original grade: " + studentGrades.get(studentName));
+			
+			if(studentGrades.containsKey(studentName)) {
+				System.out.println(studentName + "\'s original grade: " + studentGrades.get(studentName));
+			} else {
+				System.out.println(studentName + " is not currently in this class, but has been added.");
+			}
+			
 			System.out.print("Type " + studentName + "\'s new grade: ");
 			double studentGrade = input.nextDouble();
 			studentGrades.replace(studentName, studentGrade);
