@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 /* Write a void method selectionSortDescendTrace() that takes an integer array, 
@@ -8,24 +9,29 @@ up to 10 positive integers (ending in -1) and then call the
 selectionSortDescendTrace() method. */
 
 public class DescendingOrder {
-	// TODO: Write a void method selectionSortDescendTrace() that takes
-	// an integer array and the number of elements in the array as arguments,
-	// and sorts the array into descending order.
-	public static void selectionSortDescendTrace(int [] numbers, int numElements) {
-
-	}
-
 
 	public static void main(String[] args) {
-		Scanner scnr = new Scanner(System.in);
-	
-		int input, i = 0;
+		System.out.println("This program will use up to 10 integers and sort them into descending order.");
+		System.out.print("Enter up to 10 integers and enter -1 to end: ");
+		Scanner input = new Scanner(System.in);
+		int userNumber = input.nextInt();
 		int numElements = 0;
 		int [] numbers = new int[10];
-	
-		// TODO: Read in a list of up to 10 positive integers; stop when
-		// -1 is read. Then call selectionSortDescendTrace() method.
+		
+		while(userNumber != -1 && numElements <= 10) {
+			numbers[numElements] = userNumber;
+			numElements++;
+			userNumber = input.nextInt();
+		}
+		
+		input.close();
+		
+		selectionSortDescendTrace(numbers, numElements);
 
+	}
+	
+	private static void selectionSortDescendTrace(int[] numbers, int numElements) {
+		
 	}
 
 }
