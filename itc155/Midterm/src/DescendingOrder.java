@@ -28,7 +28,6 @@ public class DescendingOrder {
 		
 		numbers = Arrays.copyOf(numbers, numElements);
 		selectionSortDescendTrace(numbers, numElements);
-
 	}
 	
 	private static void selectionSortDescendTrace(int[] numbers, int numElements) {
@@ -47,5 +46,10 @@ public class DescendingOrder {
 			System.out.println(Arrays.toString(numbers));
 		}	
 	}
-
+	
+	private static void swap(int[] numbers, int larger, int toSwap) {
+		int temp = numbers[toSwap];
+		numbers[toSwap] = numbers[larger];
+		numbers[larger] = temp;	
+	}
 }
