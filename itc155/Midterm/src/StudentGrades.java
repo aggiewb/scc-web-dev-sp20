@@ -22,7 +22,7 @@ public class StudentGrades {
 		
 	}
 	
-	private static void inputGrade(HashMap<String, Double> currentGrades) {
+	public static void inputGrade(HashMap<String, Double> currentGrades) {
 		Scanner input = new Scanner(System.in);
 		String studentName = "";
 		String exit = "exit now";
