@@ -31,11 +31,12 @@ public class StudentGrades {
 		studentName = input.next() + " " + input.next();
 		
 		while(!studentName.equals(exit)){
-			
 			if(currentGrades.containsKey(studentName)) {
 				System.out.print("Type " + studentName + "\'s new grade: ");
 				double studentGrade = input.nextDouble();
+				
 				changeGrades(currentGrades, studentName, studentGrade);
+				
 				System.out.print("Type another student's name. Type " + exit + " to finish: ");
 			} else {
 				System.out.print("Student not in current class. Type another student's name. Type " + exit + " to finish: ");
