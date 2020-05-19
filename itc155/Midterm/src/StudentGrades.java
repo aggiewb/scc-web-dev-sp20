@@ -1,8 +1,8 @@
 import java.util.Scanner;
 import java.util.HashMap;
 
-/* Given a HashMap pre-filled with student names as keys and grades as values, complete main() by reading in the name of a student, outputting their original grade,
- * and then reading in and outputting their new grade. */
+/* Given a HashMap pre-filled with student names as keys and grades as values, complete main() by reading in the name of a student, 
+ * outputting their original grade, and then reading in and outputting their new grade. */
 
 public class StudentGrades {
 	public static void main (String[] args) {
