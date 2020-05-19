@@ -48,8 +48,8 @@ public class PhotoLineups {
 			 for(int i = startIndex; i <= endIndex; i++) {
 				 //Swap each element with each element after it with backtracking
 				 swap(nameList, startIndex, i); 
-	             permutationsHelper(permList, nameList, startIndex + 1, endIndex);
-	             swap(nameList, startIndex, i);
+				 permutationsHelper(permList, nameList, startIndex + 1, endIndex);
+				 swap(nameList, startIndex, i);
 			 }
 		 }
 	}

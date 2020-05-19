@@ -28,7 +28,7 @@ public class DescendingOrder {
 		selectionSortDescendTrace(numbers, numElements);
 	}
 	
-	private static void selectionSortDescendTrace(int[] numbers, int numElements) {
+	public static void selectionSortDescendTrace(int[] numbers, int numElements) {
 		for(int i = 0; i < numbers.length - 1; i++){
 			int larger = i;
 			for(int j = i + 1; j < numbers.length; j++) {
