@@ -1,9 +1,8 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-/* Write a program that lists all ways people can line up for a photo(all permutations of a list of Strings).
- * The program will read a list of one word names(until-1),and use a recursive method to create and output 
- * all possible orderings of those names,one ordering per line. */
+/* Write a program that lists all ways people can line up for a photo(all permutations of a list of Strings). The program will read a list of one word names(until-1),
+ * and use a recursive method to create and output all possible orderings of those names,one ordering per line. */
 
 public class PhotoLineups {
 	public static void main(String[] args) {

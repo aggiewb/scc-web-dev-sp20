@@ -1,12 +1,9 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-/* Write a void method selectionSortDescendTrace() that takes an integer array, 
-and sorts the array into descending order. The method should use nested loops 
-and output the array after each iteration of the outer loop, thus outputting 
-the array N-1 times (where N is the size). Complete main() to read in a list of 
-up to 10 positive integers (ending in -1) and then call the 
-selectionSortDescendTrace() method. */
+/* Write a void method selectionSortDescendTrace() that takes an integer array, and sorts the array into descending order. The method should use nested loops 
+ * and output the array after each iteration of the outer loop, thus outputting the array N-1 times (where N is the size). Complete main() to read in a list of 
+ * up to 10 positive integers (ending in -1) and then call the selectionSortDescendTrace() method. */
 
 public class DescendingOrder {
 
