@@ -17,33 +17,41 @@ public class StudentGrades {
 		studentGrades.put("Quincy Wraight", 65.4);
 		studentGrades.put("Janine Antinori", 98.2);
 
-		changeGrades(studentGrades);
+		inputGrade(studentGrades);
 	
 		System.out.println("Entire class with grades: " + studentGrades.toString());
 		
 	}
 	
-	private static void changeGrades(HashMap<String, Double> studentGrades) {
+	private static void inputGrade(HashMap<String, Double> currentGrades) {
 		Scanner input = new Scanner(System.in);
 		String studentName = "";
 		String exit = "exit now";
 		System.out.print("Type student's name. Type " + exit + " to finish: ");
 		studentName = input.next() + " " + input.next();
 		
-		while(!studentName.equals(exit)) {
-			System.out.println(studentName + "\'s original grade: " + studentGrades.get(studentName));
+		while(!studentName.equals(exit)){
 			
-			System.out.print("Type " + studentName + "\'s new grade: ");
-			double studentGrade = input.nextDouble();
-		    studentGrades.replace(studentName, studentGrade);
-		    System.out.println(studentName + "\'s new grade: " + studentGrades.get(studentName));
+			if(currentGrades.containsKey(studentName)) {
+				System.out.print("Type " + studentName + "\'s new grade: ");
+				double studentGrade = input.nextDouble();
+				changeGrades(currentGrades, studentName, studentGrade);
+				System.out.print("Type another student's name. Type " + exit + " to finish: ");
+			} else {
+				System.out.print("Student not in current class. Type another student's name. Type " + exit + " to finish: ");
+			}
 			
-			System.out.print("Type another student's name. Type " + exit + " to finish: ");
 			studentName = input.next() + " " + input.next();	
 		}
 		
 		input.close();
 		
+	}
+	
+	private static void changeGrades(HashMap<String, Double> studentGrades, String studentName, double studentGrade) {
+		System.out.println(studentName + "\'s original grade: " + studentGrades.get(studentName));
+		studentGrades.replace(studentName, studentGrade);
+		System.out.println(studentName + "\'s new grade: " + studentGrades.get(studentName));
 	}
 	
 }
