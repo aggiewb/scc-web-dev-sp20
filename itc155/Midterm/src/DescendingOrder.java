@@ -45,10 +45,10 @@ public class DescendingOrder {
 		}	
 	}
 	
-	private static void swap(int[] numbers, int larger, int toSwap) {
-		int temp = numbers[toSwap];
-		numbers[toSwap] = numbers[larger];
-		numbers[larger] = temp;	
+	private static void swap(int[] numbers, int second, int first) {
+		int temp = numbers[first];
+		numbers[first] = numbers[second];
+		numbers[second] = temp;	
 	}
 	
 }
