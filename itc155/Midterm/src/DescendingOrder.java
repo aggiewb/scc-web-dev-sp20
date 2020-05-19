@@ -16,7 +16,7 @@ public class DescendingOrder {
 		Scanner input = new Scanner(System.in);
 		int userNumber = input.nextInt();
 		int numElements = 0;
-		int [] numbers = new int[10];
+		int[] numbers = new int[10];
 		
 		while(userNumber != -1 && numElements <= 10) {
 			numbers[numElements] = userNumber;
@@ -26,12 +26,26 @@ public class DescendingOrder {
 		
 		input.close();
 		
+		numbers = Arrays.copyOf(numbers, numElements);
 		selectionSortDescendTrace(numbers, numElements);
 
 	}
 	
 	private static void selectionSortDescendTrace(int[] numbers, int numElements) {
-		
+		for(int i = 0; i < numbers.length - 1; i++){
+			int larger = i;
+			for(int j = i + 1; j < numbers.length; j++) {
+				if(numbers[larger] < numbers[j]) {
+					larger = j;
+				}
+			}
+			
+			if(larger != i) {
+				swap(numbers, larger, i);
+			}
+			
+			System.out.println(Arrays.toString(numbers));
+		}	
 	}
 
 }
