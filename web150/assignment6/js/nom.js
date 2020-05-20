@@ -57,4 +57,4 @@ for(var i = 0; i < navbarLiElements.length; i++){
     }
 }
 
-document.querySelector('footer').textContent = "poop";
+document.querySelector('footer').setAttribute('class', 'funny');
