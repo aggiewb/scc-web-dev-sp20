@@ -43,3 +43,16 @@ for(var i = 0; i < hours.length; i++){
         tdElement.setAttribute('colspan', '3');
     }
 }
+
+//Remove navbar children li with a tag elements, menus, contact, and news
+var navbarElement = document.getElementsByClassName('navbar');
+var navbarLiElements = navbar[0].getElementsByTagName('li');
+
+//For each li element in the navbar, check to see if its child anchor tag text 
+//content is "Home", if not remove the li element.
+for(var i = 0; i < navbarLiElements.length; i++){
+    var anchorElement = navbarLiElements[i].getElementsByTagName('a')[0];
+    if(anchorElement.textContent !== "Home"){
+        navbarLiElements[i].removeChild(anchorElement);
+    }
+}
