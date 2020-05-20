@@ -1,8 +1,9 @@
 import java.util.Scanner;
 import java.util.HashMap;
 
-/* Given a HashMap pre-filled with student names as keys and grades as values, complete main() by reading in the name of a student, 
- * outputting their original grade, and then reading in and outputting their new grade. */
+/* Given a HashMap pre-filled with student names as keys and grades as values, 
+ * complete main() by reading in the name of a student, outputting their original grade, 
+ * and then reading in and outputting their new grade. */
 
 public class StudentGrades {
 	public static void main (String[] args) {
@@ -31,11 +32,7 @@ public class StudentGrades {
 		
 		while(!studentName.equals(exit)){
 			if(currentGrades.containsKey(studentName)) {
-				System.out.print("Type " + studentName + "\'s new grade: ");
-				double studentGrade = input.nextDouble();
-				
-				changeGrades(currentGrades, studentName, studentGrade);
-				
+				changeGrades(currentGrades, studentName);
 				System.out.print("Type another student's name. Type " + exit + " to finish: ");
 			} else {
 				System.out.print("Student not in current class. Type another student's name. Type " + exit + " to finish: ");
@@ -48,10 +45,16 @@ public class StudentGrades {
 		
 	}
 	
-	private static void changeGrades(HashMap<String, Double> studentGrades, String studentName, double studentGrade) {
+	private static void changeGrades(HashMap<String, Double> studentGrades, String studentName) {
 		System.out.println(studentName + "\'s original grade: " + studentGrades.get(studentName));
+		
+		System.out.print("Type " + studentName + "\'s new grade: ");
+		Scanner input = new Scanner(System.in);
+		double studentGrade = input.nextDouble();
+		
 		studentGrades.replace(studentName, studentGrade);
 		System.out.println(studentName + "\'s new grade: " + studentGrades.get(studentName));
+		
 	}
 	
 }
