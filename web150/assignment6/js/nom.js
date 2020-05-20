@@ -8,14 +8,14 @@ var h3Elements = document.querySelectorAll('h3');
 h3Elements[0].textContent = "Hours";
 h3Elements[1].textContent = "Location";
 
-//Access hidden table for hours, and remove id attribute to display table.
+//Access hidden table for hours, by removing id attribute to display table.
 var hoursTable = document.getElementById('hide');
 hoursTable.removeAttribute('id');
 
-//Get all tr element children of h3 "Hours" element to construct td elements
+//Get all tr element children of h3 "Hours" element to construct th and td elements
 var tableRows = document.getElementsByTagName('tr')
 
-//Add first row of table data
+//Add first row of th elements
 var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 var firstTableRow = tableRows[0];
 
@@ -44,7 +44,7 @@ for(var i = 0; i < hours.length; i++){
     }
 }
 
-//Remove navbar children li with a tag elements, menus, contact, and news
+//Remove navbar li a elements with text content of menus, contact, and news
 var navbarElement = document.getElementsByClassName('navbar');
 var navbarLiElements = navbarElement[0].getElementsByTagName('li');
 
@@ -57,5 +57,5 @@ for(var i = 0; i < navbarLiElements.length; i++){
     }
 }
 
-//Set id attribute to footer element which change font size and style
+//Set id attribute to footer element which changes font size and style
 document.querySelector('footer').setAttribute('id', 'barcode');
