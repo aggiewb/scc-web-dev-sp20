@@ -30,3 +30,16 @@ for(var i = 0; i < daysOfWeek.length; i++){
     tdElement.appendChild(tdFirstContent);
     firstTableRow.appendChild(tdElement);
 }
+
+//Add second row of table data
+var hours = ["11am-8pm", "11am-10pm", "8am-3pm"];
+var secondTableRow = tableRows[1];
+for(var i = 0; i < hours.length; i++){
+    tdElement = document.createElement('td');
+    var tdSecondContent = document.createTextNode(hours[i]);
+    tdElement.appendChild(tdSecondContent);
+    secondTableRow.appendChild(tdElement);
+    if(i < 2){
+        tdElement.setAttribute('colspan', '3');
+    }
+}
