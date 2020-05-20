@@ -1,7 +1,3 @@
-//Access hidden table for hours, and remove class name to display table.
-var hidden = document.getElementsByClassName('hide');
-hidden[0].className = '';
-
 //Set h1 and h2 heading text content
 var headingSection = document.querySelector('hgroup');
 headingSection.firstElementChild.textContent = "Omnomnomnivore";
@@ -11,6 +7,10 @@ headingSection.lastElementChild.textContent = "We're Dino-mite!";
 var h3Elements = document.querySelectorAll('h3');
 h3Elements[0].textContent = "Hours";
 h3Elements[1].textContent = "Location";
+
+//Access hidden table for hours, and remove class name to display table.
+var hidden = document.getElementsByClassName('hide');
+hidden[0].className = '';
 
 //Get all tr element children of h3 "Hours" element to construct td elements
 var tableRows = document.getElementsByTagName('tr')
