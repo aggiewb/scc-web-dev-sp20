@@ -28,17 +28,17 @@ public class StudentGrades {
 		String studentName = "";
 		String exit = "exit now";
 		System.out.print("Type student's name. Type " + exit + " to finish: ");
-		studentName = input.next() + " " + input.next();
+		studentName = input.nextLine();
 		
 		while(!studentName.equals(exit)){
 			if(currentGrades.containsKey(studentName)) {
 				changeGrades(currentGrades, studentName);
 				System.out.print("Type another student's name. Type " + exit + " to finish: ");
 			} else {
-				System.out.print("Student not in current class. Type another student's name. Type " + exit + " to finish: ");
+				System.out.print(studentName + " not in current class. Type another student's name. Type " + exit + " to finish: ");
 			}
 			
-			studentName = input.next() + " " + input.next();	
+			studentName = input.nextLine();	
 		}
 		
 		input.close();
