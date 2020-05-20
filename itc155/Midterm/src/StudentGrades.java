@@ -26,7 +26,7 @@ public class StudentGrades {
 	public static void inputGrade(HashMap<String, Double> currentGrades) {
 		Scanner input = new Scanner(System.in);
 		String studentName = "";
-		String exit = "exit now";
+		String exit = "exit";
 		System.out.print("Type student's name. Type " + exit + " to finish: ");
 		studentName = input.nextLine();
 		
