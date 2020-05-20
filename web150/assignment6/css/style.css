@@ -1,0 +1,83 @@
+body {
+    background-color:#474747;
+}
+
+h1, h2, a, h3 {
+    color:#11F772;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+h1 {
+    font-size: 55px;
+    padding: 5px;
+    border: solid 4px cornsilk;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px cornsilk;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+h1, .navbar {
+    text-align: center;
+    width: 600px;
+}
+
+p, table, ul, footer {
+    color:#DFD6A7;
+    font-size: 20px;
+}
+
+table {
+    border: solid #11F772 4px;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: solid #11F772 2px;
+    padding: 5px;
+}
+
+p, ul, table {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    list-style-type: none;
+}
+
+/* space between the parent and child will target children only of the parent */
+.navbar li{
+    font-size: 35px;
+    display: inline;
+}
+
+.navbar li a {
+    text-decoration: none;
+    background-color: #11F772;
+    color: #474747;
+    padding: 5px;
+}
+
+.navbar li a:hover {
+    background-color: cornsilk;
+}
+
+.navbar li a:active {
+    background-color: #f0da2f;
+}
+
+.pagedecoration {
+    height: 350px;
+}
+
+h1, .navbar li a{
+    border-radius: 6px; 
+}
