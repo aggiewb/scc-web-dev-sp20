@@ -16,3 +16,7 @@ for(var i = 0; i < h3Elements.length; i++){
         h3Elements[1].textContent = "Location";
     }
 }
+
+//Get all tr element children of h3 "Hours" element to construct td elements
+var tableRows = document.getElementsByTagName('tr')
+var tdElement;
