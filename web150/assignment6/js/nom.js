@@ -14,19 +14,18 @@ hoursTable.removeAttribute('id');
 
 //Get all tr element children of h3 "Hours" element to construct td elements
 var tableRows = document.getElementsByTagName('tr')
-var tdElement;
 
 //Add first row of table data
 var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 var firstTableRow = tableRows[0];
 
-/*For each day of the week, create a td element with a text node of a day of the week, 
+/*For each day of the week, create a th element with a text node of a day of the week, 
 and append the element to the table row. */
 for(var i = 0; i < daysOfWeek.length; i++){
-    tdElement = document.createElement('td');
-    var tdFirstContent = document.createTextNode(daysOfWeek[i]);
-    tdElement.appendChild(tdFirstContent);
-    firstTableRow.appendChild(tdElement);
+    var thElement = document.createElement('th');
+    var thFirstContent = document.createTextNode(daysOfWeek[i]);
+    thElement.appendChild(thFirstContent);
+    firstTableRow.appendChild(thElement);
 }
 
 //Add second row of table data
@@ -36,7 +35,7 @@ var secondTableRow = tableRows[1];
 /*For each type of hour interval, create a td element with a text node of an hour interval, 
 and append the element to the table row. Set the colspan of 3 to the first two rows only. */
 for(var i = 0; i < hours.length; i++){
-    tdElement = document.createElement('td');
+    var tdElement = document.createElement('td');
     var tdSecondContent = document.createTextNode(hours[i]);
     tdElement.appendChild(tdSecondContent);
     secondTableRow.appendChild(tdElement);
@@ -57,3 +56,5 @@ for(var i = 0; i < navbarLiElements.length; i++){
         navbarLiElements[i].removeChild(anchorElement);
     }
 }
+
+document.querySelector('footer').textContent = "poop";
