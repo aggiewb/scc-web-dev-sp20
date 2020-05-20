@@ -81,3 +81,11 @@ p, ul, table {
 h1, .navbar li a{
     border-radius: 6px; 
 }
+
+.hide {
+    display: none;
+}
+
+.display {
+    display: inline;
+}
