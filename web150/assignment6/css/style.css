@@ -82,7 +82,7 @@ h1, .navbar li a{
     border-radius: 6px; 
 }
 
-.hide {
+#hide {
     display: none;
 }
 
