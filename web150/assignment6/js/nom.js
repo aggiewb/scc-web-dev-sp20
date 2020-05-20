@@ -20,3 +20,13 @@ for(var i = 0; i < h3Elements.length; i++){
 //Get all tr element children of h3 "Hours" element to construct td elements
 var tableRows = document.getElementsByTagName('tr')
 var tdElement;
+
+//Add first row of table data
+var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+var firstTableRow = tableRows[0];
+for(var i = 0; i < daysOfWeek.length; i++){
+    tdElement = document.createElement('td');
+    var tdFirstContent = document.createTextNode(daysOfWeek[i]);
+    tdElement.appendChild(tdFirstContent);
+    firstTableRow.appendChild(tdElement);
+}
