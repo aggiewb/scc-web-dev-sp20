@@ -8,9 +8,9 @@ var h3Elements = document.querySelectorAll('h3');
 h3Elements[0].textContent = "Hours";
 h3Elements[1].textContent = "Location";
 
-//Access hidden table for hours, and remove class name to display table.
-var hidden = document.getElementById('hide');
-hidden.removeAttribute('id');
+//Access hidden table for hours, and remove id attribute to display table.
+var hoursTable = document.getElementById('hide');
+hoursTable.removeAttribute('id');
 
 //Get all tr element children of h3 "Hours" element to construct td elements
 var tableRows = document.getElementsByTagName('tr')
