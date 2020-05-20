@@ -13,11 +13,10 @@ public class PhotoLineups {
 		
 		System.out.print("Enter a list of names, and enter -1 at the end of the list to quit: ");
 		String name = input.next();
-		nameList.add(name);
 		
-		while(!input.hasNextInt()) {
-			name = input.next();
+		while(!name.equals("-1")) {
 			nameList.add(name);
+			name = input.next();
 		}
 		
 		input.close();
