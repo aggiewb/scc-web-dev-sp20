@@ -57,4 +57,5 @@ for(var i = 0; i < navbarLiElements.length; i++){
     }
 }
 
-document.querySelector('footer').setAttribute('class', 'funny');
+//Set id attribute to footer element which change font size and style
+document.querySelector('footer').setAttribute('id', 'barcode');

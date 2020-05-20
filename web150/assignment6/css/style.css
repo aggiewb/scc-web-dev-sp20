@@ -86,6 +86,7 @@ h1, .navbar li a{
     display: none;
 }
 
-.display {
-    display: inline;
+#barcode {
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
+    font-size: 40px;
 }
