@@ -26,19 +26,19 @@ public class StudentGrades {
 	public static void inputGrade(HashMap<String, Double> currentGrades) {
 		Scanner input = new Scanner(System.in);
 		String studentName = "";
-		String exit = "exit now";
+		String exit = "exit";
 		System.out.print("Type student's name. Type " + exit + " to finish: ");
-		studentName = input.next() + " " + input.next();
+		studentName = input.nextLine();
 		
 		while(!studentName.equals(exit)){
 			if(currentGrades.containsKey(studentName)) {
 				changeGrades(currentGrades, studentName);
 				System.out.print("Type another student's name. Type " + exit + " to finish: ");
 			} else {
-				System.out.print("Student not in current class. Type another student's name. Type " + exit + " to finish: ");
+				System.out.print(studentName + " not in current class. Type another student's name. Type " + exit + " to finish: ");
 			}
 			
-			studentName = input.next() + " " + input.next();	
+			studentName = input.nextLine();	
 		}
 		
 		input.close();
