@@ -6,3 +6,13 @@ hidden[0].className = '';
 var headingSection = document.querySelector('hgroup');
 headingSection.firstElementChild.textContent = "Omnomnomnivore";
 headingSection.lastElementChild.textContent = "We're Dino-mite!";
+
+//Set h3 elements' text content
+var h3Elements = document.querySelectorAll('h3');
+for(var i = 0; i < h3Elements.length; i++){
+    if(i === 0){
+        h3Elements[0].textContent = "Hours";
+    } else if(i === 1){
+        h3Elements[1].textContent = "Location";
+    }
+}
