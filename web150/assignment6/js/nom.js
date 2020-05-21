@@ -12,7 +12,7 @@ h3Elements[1].textContent = "Location";
 var hoursTable = document.getElementById('hide');
 hoursTable.removeAttribute('id');
 
-//Get all tr element children of h3 "Hours" element to construct th and td elements
+//Get all tr elements to construct a row of th elements and a row of td elements
 var tableRows = document.getElementsByTagName('tr')
 
 //Add first row of th elements
