@@ -48,7 +48,8 @@ public class PhotoLineups {
 				 //Swap each element with each element after it with backtracking
 				 swap(nameList, startIndex, i); 
 				 permutationsHelper(permList, nameList, startIndex + 1, endIndex);
-				 //Last swap of each stack resolution that reverts the ArrayList to its state at the beginning of the stack call
+				 //Last swap of each stack resolution that reverts the ArrayList nameList 
+				 //to its state at the beginning of the stack call
 				 swap(nameList, startIndex, i);
 			 }
 		 }
