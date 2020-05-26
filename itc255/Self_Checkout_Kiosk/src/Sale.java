@@ -33,6 +33,17 @@ public class Sale {
 		}
 	}
 	
+	public void setProduct(RestrictedProduct item, Employee name) {
+		if(item.requestEmployeeApproval(name, item)) {
+			if(products.containsKey(item)) {
+				products.replace(item, products.get(item) + 1);
+			} else {
+				products.put(item, 1);
+			}
+			
+		}
+	}
+	
 	public TreeMap<Product, Integer> getProducts() {
 		return products;
 	}
