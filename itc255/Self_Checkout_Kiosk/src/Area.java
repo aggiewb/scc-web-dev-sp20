@@ -9,12 +9,5 @@ public abstract class Area {
 	public double getWeight() {
 		return weight;
 	}
-	
-	public boolean checkWeight(double weight) {
-		if(weight == this.weight) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+
 }
