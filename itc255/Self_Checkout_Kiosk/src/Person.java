@@ -7,6 +7,7 @@ public abstract class Person {
 	private int phoneNumber;
 	private String email;
 	private String streetAddress;
+	private String city;
 	private String state;
 	private int zip;
 	private Date dateAdded;
@@ -23,14 +24,15 @@ public abstract class Person {
 		return this.dateAdded;
 	}
 	
-	public void setAddress(String streetAddress, String state, int zip) {
+	public void setAddress(String streetAddress, String city, String state, int zip) {
 		this.streetAddress = streetAddress;
+		this.city = city;
 		this.state = state;
 		this.zip = zip;
 	}
 	
 	public String getAddress() {
-		return this.streetAddress + " " + this.state + " " + this.zip;
+		return this.streetAddress + " " + this.state + " " + this.zip + " " + this.city;
 	}
 	
 	public void setPhoneNumber(int phoneNumber) {
