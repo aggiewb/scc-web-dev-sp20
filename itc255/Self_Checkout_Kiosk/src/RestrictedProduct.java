@@ -1,10 +1,10 @@
 
-public class Restricted_Product extends Product{
+public class RestrictedProduct extends Product{
 	private boolean restriction;
 	private int ageLimit;
 	private int quantityLimit;
 	
-	Restricted_Product(int barcode, String name, String type, double price) {
+	RestrictedProduct(int barcode, String name, String type, double price) {
 		super(barcode, name, type, price);
 	}
 	
