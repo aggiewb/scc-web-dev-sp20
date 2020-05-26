@@ -23,5 +23,15 @@ public class Employee extends Person{
 		return this.restrictedItemAuth;
 	}
 	
+	public boolean approveRestricted(RestrictedProduct product, Customer name) {
+		if(name.getAge() >= product.getAgeLimit()) {
+			return true;	
+		}
+		return false;
+	}
+	
+	public void clearCustomerRequest(Customer name) {
+		name.resetAssistance();
+	}
 
 }
