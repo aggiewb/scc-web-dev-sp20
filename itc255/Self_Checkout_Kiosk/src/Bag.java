@@ -1,17 +1,13 @@
 
 public class Bag extends Area {
-	private int barcodeId;
-	
 	Bag(int weight){
 		super(weight);
 	}
 	
-	public void setBarcodeId(int barCode) {
-		this.barcodeId = barCode;
-	}
-
-	public int getBarcodeId() {
-		return barcodeId;
+	public void alertCustomer(double productWeight) {
+		if(productWeight != super.getWeight()) {
+			System.out.println("Remove product from bagging area and try again.");
+		}
 	}
 
 }
