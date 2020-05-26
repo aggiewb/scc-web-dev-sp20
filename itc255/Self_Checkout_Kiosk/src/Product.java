@@ -4,8 +4,9 @@ public class Product {
 	private String type;
 	private String name;
 	private int amountAvailable;
+	private double price;
 	
-	Product(int barcode, String name, String type){
+	Product(int barcode, String name, String type, double price){
 		this.barcode = barcode;
 		this.name = name;
 		this.type = type;
@@ -25,6 +26,10 @@ public class Product {
 	
 	public int getAmountAvailable() {
 		return this.amountAvailable;
+	}
+
+	public double getPrice() {
+		return price;
 	}
 
 }
