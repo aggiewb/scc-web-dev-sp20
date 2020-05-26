@@ -37,4 +37,9 @@ public class Customer extends Person {
 		this.age = age;
 	}
 	
+	public String toString() {
+		return "Name: " + this.getLastName() + ", " + this.getFirstName() + " Email: " + this.getEmail() + " Phone Number: " + this.getPhoneNumber() +
+				" Reward points: " + this.getTotalRewardPoints();
+	}
+	
 }

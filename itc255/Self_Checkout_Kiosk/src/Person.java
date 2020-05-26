@@ -32,7 +32,7 @@ public abstract class Person {
 	}
 	
 	public String getAddress() {
-		return this.streetAddress + " " + this.state + " " + this.zip + " " + this.city;
+		return this.streetAddress + ", " + this.city + ", " + this.state + " " + this.zip + " ";
 	}
 	
 	public void setPhoneNumber(int phoneNumber) {
@@ -53,6 +53,11 @@ public abstract class Person {
 
 	public String getLastName() {
 		return lastName;
+	}
+	
+
+	public String toString() {
+		return "Name: " + this.getLastName() + ", " + this.getFirstName() + " Email: " + this.getEmail() + " Phone Number: " + this.getPhoneNumber();
 	}
 	
 }
