@@ -33,8 +33,8 @@ public class Sale {
 		}
 	}
 	
-	public void setProduct(RestrictedProduct item, Employee name) {
-		if(item.requestEmployeeApproval(name, item)) {
+	public void setProduct(RestrictedProduct item, Customer name, Employee worker) {
+		if(item.requestEmployeeApproval(worker, item, name)) {
 			if(products.containsKey(item)) {
 				products.replace(item, products.get(item) + 1);
 			} else {
