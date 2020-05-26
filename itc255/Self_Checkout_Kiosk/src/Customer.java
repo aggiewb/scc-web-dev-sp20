@@ -15,4 +15,8 @@ public class Customer extends Person {
 		return this.totalRewardPoints;
 	}
 	
+	public void requestAssistance() {	
+		this.assistance = true;
+	}
+	
 }
