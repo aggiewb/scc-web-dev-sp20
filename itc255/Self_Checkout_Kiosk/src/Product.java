@@ -10,6 +10,7 @@ public class Product {
 		this.barcode = barcode;
 		this.name = name;
 		this.type = type;
+		this.price = price;
 	}
 
 	public int getProductBarcode(String productName) {
