@@ -21,8 +21,8 @@ public class Sale {
 		return Sale.tax;
 	}
 
-	public int getDiscount() {
-		return discount;
+	public int getDiscount(Customer name) {
+		return (name.getTotalRewardPoints()) / 10;
 	}
 	
 	public void setProduct(Product item) {
