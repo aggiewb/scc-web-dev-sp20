@@ -7,6 +7,7 @@ public abstract class Person {
 	private int phoneNumber;
 	private String email;
 	private String streetAddress;
+	private String city;
 	private String state;
 	private int zip;
 	private Date dateAdded;
@@ -19,22 +20,19 @@ public abstract class Person {
 		this.dateAdded = personDate;
 	}
 	
-	public String getPerson() {
-		return this.lastName + " " + this.firstName + " " + this.email;
-	}
-	
 	public Date getDateAdded() {
 		return this.dateAdded;
 	}
 	
-	public void setAddress(String streetAddress, String state, int zip) {
+	public void setAddress(String streetAddress, String city, String state, int zip) {
 		this.streetAddress = streetAddress;
+		this.city = city;
 		this.state = state;
 		this.zip = zip;
 	}
 	
 	public String getAddress() {
-		return this.streetAddress + " " + this.state + " " + this.zip;
+		return this.streetAddress + ", " + this.city + ", " + this.state + " " + this.zip + " ";
 	}
 	
 	public void setPhoneNumber(int phoneNumber) {
@@ -43,6 +41,23 @@ public abstract class Person {
 	
 	public int getPhoneNumber() {
 		return this.phoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+	
+
+	public String toString() {
+		return "Name: " + this.getLastName() + ", " + this.getFirstName() + " Email: " + this.getEmail() + " Phone Number: " + this.getPhoneNumber();
 	}
 	
 }

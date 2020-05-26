@@ -21,8 +21,8 @@ public class Sale {
 		return Sale.tax;
 	}
 
-	public int getDiscount() {
-		return discount;
+	public int getDiscount(Customer name) {
+		return (name.getTotalRewardPoints()) / 10;
 	}
 	
 	public void setProduct(Product item) {
@@ -30,6 +30,17 @@ public class Sale {
 			products.replace(item, products.get(item) + 1);
 		} else {
 			products.put(item, 1);
+		}
+	}
+	
+	public void setProduct(RestrictedProduct item, Customer name, Employee worker) {
+		if(item.requestEmployeeApproval(worker, item, name)) {
+			if(products.containsKey(item)) {
+				products.replace(item, products.get(item) + 1);
+			} else {
+				products.put(item, 1);
+			}
+			
 		}
 	}
 	
