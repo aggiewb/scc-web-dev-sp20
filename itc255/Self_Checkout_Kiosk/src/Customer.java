@@ -19,4 +19,9 @@ public class Customer extends Person {
 		this.assistance = true;
 	}
 	
+	public double payTotalDue(Sale order, double payment) {
+		double total = order.getTotal();
+		return total - payment;
+	}
+	
 }
