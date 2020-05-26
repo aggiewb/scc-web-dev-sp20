@@ -4,8 +4,8 @@ public class Restricted_Product extends Product{
 	private int ageLimit;
 	private int quantityLimit;
 	
-	Restricted_Product(int barcode, String name, String type) {
-		super(barcode, name, type);
+	Restricted_Product(int barcode, String name, String type, double price) {
+		super(barcode, name, type, price);
 	}
 	
 	public boolean getRestriction() {
@@ -30,6 +30,10 @@ public class Restricted_Product extends Product{
 
 	public void setQuantityLimit(int quantityLimit) {
 		this.quantityLimit = quantityLimit;
+	}
+	
+	public double getPrice() {
+		return this.getPrice();
 	}
 	
 }
