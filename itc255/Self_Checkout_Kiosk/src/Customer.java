@@ -19,8 +19,4 @@ public class Customer extends Person {
 		this.assistance = true;
 	}
 	
-	public int searchProductDirectory(String productName) {
-		return Product.getProductBarcode(productName);
-	}
-	
 }
