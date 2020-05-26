@@ -19,10 +19,6 @@ public abstract class Person {
 		this.dateAdded = personDate;
 	}
 	
-	public String getPerson() {
-		return this.lastName + " " + this.firstName + " " + this.email;
-	}
-	
 	public Date getDateAdded() {
 		return this.dateAdded;
 	}
@@ -43,6 +39,18 @@ public abstract class Person {
 	
 	public int getPhoneNumber() {
 		return this.phoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
 	}
 	
 }
