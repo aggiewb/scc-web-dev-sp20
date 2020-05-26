@@ -5,6 +5,7 @@ public class Product {
 	private String name;
 	private int amountAvailable;
 	private double price;
+	private double weight;
 	
 	Product(int barcode, String name, String type, double price){
 		this.barcode = barcode;
@@ -31,6 +32,14 @@ public class Product {
 
 	public double getPrice() {
 		return price;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
 	}
 
 }
