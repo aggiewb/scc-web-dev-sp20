@@ -15,10 +15,6 @@ public class RestrictedProduct extends Product{
 		this.ageLimit = ageLimit;
 	}
 	
-	public double getPrice() {
-		return this.getPrice();
-	}
-	
 	public boolean requestEmployeeApproval(Employee worker, Customer name) {
 		return worker.approveRestricted(this, name);
 	}
