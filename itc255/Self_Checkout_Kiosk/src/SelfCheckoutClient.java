@@ -16,6 +16,13 @@ public class SelfCheckoutClient {
 		System.out.println();
 		
 		Sale fakeOrder = newOrder();
+		fakeOrder.setProduct(fakeMilk);
+		fakeOrder.setProduct(fakeBread);
+		fakeOrder.setProduct(fakeMeat);
+		fakeOrder.setProduct(fakeVeggie);
+		fakeOrder.setProduct(fakeBeer, fakeCustomer, fakeEmployee);
+		System.out.println();
+		System.out.println(fakeOrder.getProducts());
 	}
 	
 	public static Customer newCustomer() {
