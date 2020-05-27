@@ -54,5 +54,9 @@ public class Product {
 	public boolean isRestriction() {
 		return restriction;
 	}
+	
+	public boolean setRestriction(boolean restriction) {
+		return this.restriction = restriction;
+	}
 
 }

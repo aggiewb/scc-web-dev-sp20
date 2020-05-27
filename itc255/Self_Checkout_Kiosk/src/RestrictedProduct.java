@@ -1,6 +1,5 @@
 
 public class RestrictedProduct extends Product{
-	private boolean restriction = true;
 	private int ageLimit;
 	
 	RestrictedProduct(int barcode, String name, String type, double price) {
