@@ -61,4 +61,8 @@ public class Sale {
 		return this.total;
 	}
 	
+	public String toString() {
+		return this.saleID + " ";
+	}
+	
 }

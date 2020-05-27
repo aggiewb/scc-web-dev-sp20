@@ -4,13 +4,18 @@ public class SelfCheckoutClient {
 	public static void main(String[] args) {
 		Customer fakeCustomer = newCustomer();
 		System.out.println();
+		
 		Employee fakeEmployee = newEmployee();
 		System.out.println();
+		
 		Product fakeMilk = newMilk();
 		Product fakeBread = newBread();
 		Product fakeMeat = newMeat();
 		Product fakeVeggie = newVeggie();
 		RestrictedProduct fakeBeer = newBeer();
+		System.out.println();
+		
+		Sale fakeOrder = newOrder();
 	}
 	
 	public static Customer newCustomer() {
@@ -80,6 +85,12 @@ public class SelfCheckoutClient {
 		System.out.println(fakeBeer);
 		System.out.println("Amount available: " + fakeBeer.getAmountAvailable() + " Restriction: " + fakeBeer.isRestriction());
 		return fakeBeer;	
+	}
+	
+	public static Sale newOrder() {
+		Sale fakeSale = new Sale(1);
+		System.out.println(fakeSale);
+		return fakeSale;
 	}
 
 }
