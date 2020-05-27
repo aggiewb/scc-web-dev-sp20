@@ -1,12 +1,19 @@
 
 public class Bag extends Area {
-	Bag(int weight){
-		super(weight);
+	
+	public void alertCustomer(Product item, double productWeight) {
+		if(productWeight != item.getWeight()) {
+			System.out.println("Remove product from bagging area and try again.");
+		} else {
+			System.out.println("Scan next item.");
+		}
 	}
 	
-	public void alertCustomer(double productWeight) {
-		if(productWeight != super.getWeight()) {
+	public void alertCustomer(RestrictedProduct item, double productWeight) {
+		if(productWeight != item.getWeight()) {
 			System.out.println("Remove product from bagging area and try again.");
+		} else {
+			System.out.println("Scan next item.");
 		}
 	}
 
