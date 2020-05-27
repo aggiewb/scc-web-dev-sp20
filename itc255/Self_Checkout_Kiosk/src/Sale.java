@@ -1,19 +1,18 @@
 import java.util.TreeMap;
 
 public class Sale {
-	private int saleID;
+	private long saleID;
 	private TreeMap<Product, Integer> products;
 	private int subTotal;
 	private static double tax = 0.10;
 	private int discount;
 	private int total;
 	
-	Sale(int saleId, int discount){
+	Sale(int saleId){
 		this.saleID = saleId;
-		this.discount = discount;
 	}
 
-	public int getSaleID() {
+	public long getSaleID() {
 		return saleID;
 	}
 
