@@ -38,7 +38,7 @@ public class Customer extends Person {
 	}
 	
 	public String toString() {
-		return "Name: " + this.getLastName() + ", " + this.getFirstName() + " Email: " + this.getEmail() + " Phone Number: " + this.getPhoneNumber() +
+		return "Name: " + super.getLastName() + ", " + super.getFirstName() + " Email: " + super.getEmail() + " Phone Number: " + super.getPhoneNumber() +
 				" Reward points: " + this.getTotalRewardPoints();
 	}
 	
