@@ -24,10 +24,7 @@ public class Employee extends Person{
 	}
 	
 	public boolean approveRestricted(RestrictedProduct product, Customer name) {
-		if(name.getAge() >= product.getAgeLimit()) {
-			return true;	
-		}
-		return false;
+		return name.getAge() >= product.getAgeLimit();
 	}
 	
 	public void clearCustomerRequest(Customer name) {
