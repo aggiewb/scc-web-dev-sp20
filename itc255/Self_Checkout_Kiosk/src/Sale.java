@@ -56,7 +56,7 @@ public class Sale {
 	}
 	
 	public String toString() {
-		return this.saleID + " ";
+		return "Order Number: " + this.saleID;
 	}
 	
 }
