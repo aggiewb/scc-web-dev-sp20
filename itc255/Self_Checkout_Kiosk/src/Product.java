@@ -18,8 +18,12 @@ public class Product {
 		return this.barcode;
 	}
 	
-	public String getProduct() {
-		return this.name + " " + this.type;
+	public String getName() {
+		return this.name;
+	}
+	
+	public String getType() {
+		return this.type;
 	}
 	
 	public void setAmountAvailable(int amount) {
@@ -40,6 +44,10 @@ public class Product {
 
 	public void setWeight(double weight) {
 		this.weight = weight;
+	}
+	
+	public String toString() {
+		return this.name + " " + this.type + " Weight: " + this.weight + " Price: $" + this.price + " ";
 	}
 
 }
