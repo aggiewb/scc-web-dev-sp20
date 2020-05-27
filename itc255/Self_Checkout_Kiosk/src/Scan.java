@@ -1,17 +1,12 @@
 
 public class Scan extends Area {
-	private int barcodeId;
 	
-	Scan(int weight){
-		super(weight);
+	public void checkoutProduct(Sale order, Product item) {
+		order.setProduct(item);
 	}
 	
-	public void setBarcodeId(int barCode) {
-		this.barcodeId = barCode;
+	public void checkoutProduct(Sale order, RestrictedProduct item, Employee nameEmployee, Customer nameCustomer) {
+		order.setProduct(item, nameCustomer, nameEmployee);
 	}
-
-	public int getBarcodeId() {
-		return barcodeId;
-	}
-
+	
 }

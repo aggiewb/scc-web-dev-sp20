@@ -31,9 +31,7 @@ public class Sale {
 	
 	public void setProduct(RestrictedProduct item, Customer name, Employee worker) {
 		if(item.requestEmployeeApproval(worker, name)) {
-			products.add(item);
-		} else {
-			return;
+			this.setProduct(item);
 		}
 	}
 	
@@ -56,7 +54,7 @@ public class Sale {
 	}
 	
 	public String toString() {
-		return this.saleID + " ";
+		return "Order Number: " + this.saleID;
 	}
 	
 }
