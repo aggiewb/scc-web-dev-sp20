@@ -1,18 +1,10 @@
 
 public class RestrictedProduct extends Product{
-	private boolean restriction;
+	private boolean restriction = true;
 	private int ageLimit;
 	
 	RestrictedProduct(int barcode, String name, String type, double price) {
 		super(barcode, name, type, price);
-	}
-	
-	public boolean getRestriction() {
-		return restriction;
-	}
-	
-	public void setRestriction(boolean restriction) {
-		this.restriction = restriction;
 	}
 	
 	public int getAgeLimit() {
