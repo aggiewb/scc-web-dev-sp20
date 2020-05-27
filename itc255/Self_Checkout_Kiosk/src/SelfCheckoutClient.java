@@ -10,6 +10,7 @@ public class SelfCheckoutClient {
 		Product fakeBread = newBread();
 		Product fakeMeat = newMeat();
 		Product fakeVeggie = newVeggie();
+		RestrictedProduct fakeBeer = newBeer();
 	}
 	
 	public static Customer newCustomer() {
@@ -49,7 +50,7 @@ public class SelfCheckoutClient {
 		fakeBread.setAmountAvailable(23);
 		fakeBread.setWeight(1);
 		System.out.println(fakeBread);
-		System.out.println("Amount available: " + fakeBread.getAmountAvailable());
+		System.out.println("Amount available: " + fakeBread.getAmountAvailable() + " Restriction: " + fakeBread.isRestriction());
 		return fakeBread;
 	}
 	
@@ -58,7 +59,7 @@ public class SelfCheckoutClient {
 		fakeMeat.setAmountAvailable(15);
 		fakeMeat.setWeight(1.5);
 		System.out.println(fakeMeat);
-		System.out.println("Amount available: " + fakeMeat.getAmountAvailable());
+		System.out.println("Amount available: " + fakeMeat.getAmountAvailable() + " Restriction: " + fakeMeat.isRestriction());
 		return fakeMeat;
 	}
 
@@ -66,8 +67,19 @@ public class SelfCheckoutClient {
 		Product fakeVeggie = new Product(456789, "tomato", "vegetable", 1.24);
 		fakeVeggie.setAmountAvailable(46);
 		System.out.println(fakeVeggie);
-		System.out.println("Amount available: " + fakeVeggie.getAmountAvailable());
+		System.out.println("Amount available: " + fakeVeggie.getAmountAvailable() + " Restriction: " + fakeVeggie.isRestriction());
 		return fakeVeggie;
+	}
+	
+	public static RestrictedProduct newBeer() {
+		RestrictedProduct fakeBeer = new RestrictedProduct(987654, "Henry's Hefeweizen", "alcohol", 9.99);
+		fakeBeer.setAgeLimit(21);
+		fakeBeer.setAmountAvailable(12);
+		fakeBeer.setWeight(20);
+		fakeBeer.setRestriction(true);
+		System.out.println(fakeBeer);
+		System.out.println("Amount available: " + fakeBeer.getAmountAvailable() + " Restriction: " + fakeBeer.isRestriction());
+		return fakeBeer;	
 	}
 
 }
