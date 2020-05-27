@@ -1,8 +1,9 @@
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 public class Sale {
 	private long saleID;
-	private TreeMap<Product, Integer> products;
+	private ArrayList<Product> products = new ArrayList<Product>();
 	private int subTotal;
 	private static double tax = 0.10;
 	private int discount;
@@ -25,25 +26,18 @@ public class Sale {
 	}
 	
 	public void setProduct(Product item) {
-		if(products.containsKey(item)) {
-			products.replace(item, products.get(item) + 1);
-		} else {
-			products.put(item, 1);
-		}
+		products.add(item);
 	}
 	
 	public void setProduct(RestrictedProduct item, Customer name, Employee worker) {
 		if(item.requestEmployeeApproval(worker, name)) {
-			if(products.containsKey(item)) {
-				products.replace(item, products.get(item) + 1);
-			} else {
-				products.put(item, 1);
-			}
-			
+			products.add(item);
+		} else {
+			return;
 		}
 	}
 	
-	public TreeMap<Product, Integer> getProducts() {
+	public ArrayList<Product> getProducts() {
 		return products;
 	}
 	
