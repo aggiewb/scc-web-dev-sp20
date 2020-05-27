@@ -6,6 +6,7 @@ public class Product {
 	private int amountAvailable;
 	private double price;
 	private double weight;
+	private boolean restriction = false;
 	
 	Product(int barcode, String name, String type, double price){
 		this.barcode = barcode;
@@ -48,6 +49,14 @@ public class Product {
 	
 	public String toString() {
 		return this.name + " " + this.type + " Weight: " + this.weight + " Price: $" + this.price + " ";
+	}
+
+	public boolean isRestriction() {
+		return restriction;
+	}
+	
+	public boolean setRestriction(boolean restriction) {
+		return this.restriction = restriction;
 	}
 
 }
