@@ -4,7 +4,7 @@ import java.util.Date;
 public abstract class Person {
 	private String lastName;
 	private String firstName;
-	private int phoneNumber;
+	private String phoneNumber;
 	private String email;
 	private String streetAddress;
 	private String city;
@@ -35,11 +35,11 @@ public abstract class Person {
 		return this.streetAddress + ", " + this.city + ", " + this.state + " " + this.zip + " ";
 	}
 	
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return this.phoneNumber;
 	}
 
@@ -55,7 +55,6 @@ public abstract class Person {
 		return lastName;
 	}
 	
-
 	public String toString() {
 		return "Name: " + this.getLastName() + ", " + this.getFirstName() + " Email: " + this.getEmail() + " Phone Number: " + this.getPhoneNumber();
 	}

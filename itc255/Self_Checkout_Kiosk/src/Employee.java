@@ -1,17 +1,17 @@
 
 public class Employee extends Person{
-	private int employeeId;
+	private long employeeId;
 	private boolean restrictedItemAuth;
 	
 	Employee(String lastName, String firstName, String email){
 		super(lastName, firstName, email);
 	}
 	
-	public void setEmployeeId(int id) {
+	public void setEmployeeId(long id) {
 		this.employeeId = id;
 	}
 	
-	public int getEmployeeId() {
+	public long getEmployeeId() {
 		return this.employeeId;
 	}
 	
@@ -24,10 +24,7 @@ public class Employee extends Person{
 	}
 	
 	public boolean approveRestricted(RestrictedProduct product, Customer name) {
-		if(name.getAge() >= product.getAgeLimit()) {
-			return true;	
-		}
-		return false;
+		return name.getAge() >= product.getAgeLimit();
 	}
 	
 	public void clearCustomerRequest(Customer name) {

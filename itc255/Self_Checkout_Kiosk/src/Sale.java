@@ -1,19 +1,18 @@
 import java.util.TreeMap;
 
 public class Sale {
-	private int saleID;
+	private long saleID;
 	private TreeMap<Product, Integer> products;
-	private double subTotal;
+	private int subTotal;
 	private static double tax = 0.10;
 	private int discount;
-	private double total;
+	private int total;
 	
-	Sale(int saleId, int discount){
+	Sale(int saleId){
 		this.saleID = saleId;
-		this.discount = discount;
 	}
 
-	public int getSaleID() {
+	public long getSaleID() {
 		return saleID;
 	}
 
@@ -34,7 +33,7 @@ public class Sale {
 	}
 	
 	public void setProduct(RestrictedProduct item, Customer name, Employee worker) {
-		if(item.requestEmployeeApproval(worker, item, name)) {
+		if(item.requestEmployeeApproval(worker, name)) {
 			if(products.containsKey(item)) {
 				products.replace(item, products.get(item) + 1);
 			} else {
@@ -54,8 +53,8 @@ public class Sale {
 		}
 	}
 	
-	public double calculateTotal() {
-		return this.total = (this.subTotal * Sale.tax) - (this.subTotal * (this.discount / 100));
+	public void calculateTotal() {
+		 this.total = (int) ((this.subTotal * Sale.tax) - (this.subTotal * (this.discount / 100)));
 	}
 	
 	public double getTotal() {

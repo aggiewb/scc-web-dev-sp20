@@ -27,8 +27,8 @@ public class RestrictedProduct extends Product{
 		return this.getPrice();
 	}
 	
-	public boolean requestEmployeeApproval(Employee worker, RestrictedProduct item, Customer name) {
-		return worker.approveRestricted(item, name);
+	public boolean requestEmployeeApproval(Employee worker, Customer name) {
+		return worker.approveRestricted(this, name);
 	}
 	
 }
