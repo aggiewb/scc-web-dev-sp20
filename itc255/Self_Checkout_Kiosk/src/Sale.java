@@ -3,10 +3,10 @@ import java.util.TreeMap;
 public class Sale {
 	private int saleID;
 	private TreeMap<Product, Integer> products;
-	private double subTotal;
+	private int subTotal;
 	private static double tax = 0.10;
 	private int discount;
-	private double total;
+	private int total;
 	
 	Sale(int saleId, int discount){
 		this.saleID = saleId;
@@ -54,8 +54,8 @@ public class Sale {
 		}
 	}
 	
-	public double calculateTotal() {
-		return this.total = (this.subTotal * Sale.tax) - (this.subTotal * (this.discount / 100));
+	public void calculateTotal() {
+		 this.total = (int) ((this.subTotal * Sale.tax) - (this.subTotal * (this.discount / 100)));
 	}
 	
 	public double getTotal() {

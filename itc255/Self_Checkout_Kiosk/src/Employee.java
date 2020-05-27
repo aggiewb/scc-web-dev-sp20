@@ -1,17 +1,17 @@
 
 public class Employee extends Person{
-	private int employeeId;
+	private long employeeId;
 	private boolean restrictedItemAuth;
 	
 	Employee(String lastName, String firstName, String email){
 		super(lastName, firstName, email);
 	}
 	
-	public void setEmployeeId(int id) {
+	public void setEmployeeId(long id) {
 		this.employeeId = id;
 	}
 	
-	public int getEmployeeId() {
+	public long getEmployeeId() {
 		return this.employeeId;
 	}
 	
