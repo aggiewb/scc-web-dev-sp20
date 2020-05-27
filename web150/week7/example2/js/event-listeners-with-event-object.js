@@ -1,9 +1,9 @@
-function checkLength(event, minLength) {         // Declare function
+function checkLength(e, minLength) {         // Declare function
     var el, elMsg;                             // Declare variables
-    if (!event) {                                  // If event object doesn't exist
-    event = window.event;                        // Use IE fallback
+    if (!e) {                                  // If event object doesn't exist
+      e = window.event;                        // Use IE fallback
     }
-    el = event.target || event.srcElement;             // Get target of event
+    el = e.target || e.srcElement;             // Get target of event
     elMsg = el.nextSibling;                    // Get its next sibling
    
     if (el.value.length < minLength) {         // If length is too short set msg
@@ -15,14 +15,14 @@ function checkLength(event, minLength) {         // Declare function
    
   var elUsername = document.getElementById('username');// Get username input
   if (elUsername.addEventListener) {           // If event listener supported
-    elUsername.addEventListener('blur', function(event) {  // On blur event
+    elUsername.addEventListener('blur', function(e) {  // On blur event
       // NOTE: This function is checkLength() - not checkUsername()
-      checkLength(event, 5);                             // Call checkLength()
+      checkLength(e, 5);                             // Call checkLength()
     }, false);                                       // Capture in bubble phase
   } else {                                           // Otherwise
-    elUsername.attachEvent('onblur', function(event) {   // IE fallback onblur
+    elUsername.attachEvent('onblur', function(e) {   // IE fallback onblur
       // NOTE: This function is checkLength() - not checkUsername()
-      checkLength(event, 5);                             // Call checkLength()
+      checkLength(e, 5);                             // Call checkLength()
     });
   }
   
