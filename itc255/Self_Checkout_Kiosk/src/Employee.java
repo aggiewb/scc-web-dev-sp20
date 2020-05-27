@@ -24,7 +24,13 @@ public class Employee extends Person{
 	}
 	
 	public boolean approveRestricted(RestrictedProduct product, Customer name) {
-		return name.getAge() >= product.getAgeLimit();
+		//Give authorization only if an employee's auth is set to true and 
+		//if the customer's age is equal to or above the ageLimit set on a product
+		if(this.restrictedItemAuth) {
+			return name.getAge() >= product.getAgeLimit();
+		} else {
+			return false;
+		}
 	}
 	
 	public void clearCustomerRequest(Customer name) {
