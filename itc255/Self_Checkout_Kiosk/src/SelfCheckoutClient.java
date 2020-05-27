@@ -2,6 +2,9 @@
 public class SelfCheckoutClient {
 
 	public static void main(String[] args) {
+		Bag baggingArea = new Bag();
+		Scan scanningArea = new Scan();
+		
 		Customer fakeCustomer = newCustomer();
 		System.out.println();
 		
@@ -15,12 +18,24 @@ public class SelfCheckoutClient {
 		RestrictedProduct fakeBeer = newBeer();
 		System.out.println();
 		
+		//Add System.out.println("Checking out <item name>: "); to help highlight each product actions
 		Sale fakeOrder = newOrder();
-		fakeOrder.setProduct(fakeMilk);
-		fakeOrder.setProduct(fakeBread);
-		fakeOrder.setProduct(fakeMeat);
-		fakeOrder.setProduct(fakeVeggie);
-		fakeOrder.setProduct(fakeBeer, fakeCustomer, fakeEmployee);
+		System.out.println("Checking out milk: ");
+		scanningArea.checkoutProduct(fakeOrder, fakeMilk);
+		baggingArea.alertCustomer(fakeMilk, 3.4);
+		baggingArea.alertCustomer(fakeMilk, 8.6);
+		System.out.println("Checking out bread: ");
+		scanningArea.checkoutProduct(fakeOrder, fakeBread);
+		baggingArea.alertCustomer(fakeBread, 1);
+		System.out.println("Checking out bacon: ");
+		scanningArea.checkoutProduct(fakeOrder, fakeMeat);
+		baggingArea.alertCustomer(fakeMeat, 1.5);
+		System.out.println("Checking out tomatoes: ");
+		scanningArea.checkoutProduct(fakeOrder, fakeVeggie);
+		System.out.println("Checking out beer: ");
+		scanningArea.checkoutProduct(fakeOrder, fakeBeer, fakeEmployee, fakeCustomer);
+		baggingArea.alertCustomer(fakeBeer, 19.56);
+		baggingArea.alertCustomer(fakeBeer, 20);
 		System.out.println();
 		System.out.println(fakeOrder.getProducts());
 	}
@@ -78,6 +93,7 @@ public class SelfCheckoutClient {
 	public static Product newVeggie() {
 		Product fakeVeggie = new Product(456789, "tomato", "vegetable", 1.24);
 		fakeVeggie.setAmountAvailable(46);
+		fakeVeggie.setWeight(4);
 		System.out.println(fakeVeggie);
 		System.out.println("Amount available: " + fakeVeggie.getAmountAvailable() + " Restriction: " + fakeVeggie.isRestriction());
 		return fakeVeggie;
