@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Customer extends Person {
 	private int totalRewardPoints;
@@ -24,9 +26,9 @@ public class Customer extends Person {
 		this.assistance = false;
 	}
 	
-	public double payTotalDue(Sale order, double payment) {
-		double total = order.getTotal();
-		return total - payment;
+	public BigDecimal payTotalDue(BigDecimal total, double customerPayment) {
+		BigDecimal payment = new BigDecimal(customerPayment);
+		return total.subtract(payment).setScale(2, RoundingMode.HALF_EVEN);
 	}
 
 	public int getAge() {
