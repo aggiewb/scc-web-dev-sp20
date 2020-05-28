@@ -88,4 +88,8 @@ public class Sale {
 		this.products.remove(productIndex);
 	}
 	
+	public void removeAllItems() {
+		this.products.clear();
+	}
+	
 }

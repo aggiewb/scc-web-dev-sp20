@@ -41,6 +41,8 @@ public class Employee extends Person{
 		order.removeItem(order.getProducts().lastIndexOf(item));	
 	}
 	
-	//Add method removeOrder()
+	public void removeOrder(Sale order) {
+		order.removeAllItems();
+	}
 
 }

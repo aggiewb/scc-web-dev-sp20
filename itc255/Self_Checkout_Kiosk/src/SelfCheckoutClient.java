@@ -73,6 +73,11 @@ public class SelfCheckoutClient {
 		
 		System.out.println("After payment: $" + fakeCustomer.payTotalDue(fakeOrder.getTotal(), 119.93));
 		
+		System.out.println();
+		fakeEmployee.removeOrder(fakeOrder);
+		System.out.println("After order items deletion: ");
+		System.out.println(fakeOrder.getProducts());
+		
 	}
 	
 	public static Customer newCustomer() {
