@@ -36,5 +36,11 @@ public class Employee extends Person{
 	public void clearCustomerRequest(Customer name) {
 		name.resetAssistance();
 	}
+	
+	public void removeSaleProduct(Sale order, Product item) {
+		order.removeItem(order.getProducts().lastIndexOf(item));	
+	}
+	
+	//Add method removeOrder()
 
 }
