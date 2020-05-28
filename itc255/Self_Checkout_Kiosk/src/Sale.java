@@ -36,6 +36,7 @@ public class Sale {
 	
 	public void setProduct(Product item) {
 		products.add(item);
+		item.setAmountAvailable(item.getAmountAvailable() - 1);
 	}
 	
 	public void setProduct(RestrictedProduct item, Customer name, Employee worker) {
