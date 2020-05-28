@@ -33,11 +33,16 @@ public class SelfCheckoutClient {
 		System.out.println("Checking out tomatoes: ");
 		scanningArea.checkoutProduct(fakeOrder, fakeVeggie);
 		baggingArea.alertCustomer(fakeVeggie, 4);
+		
+		fakeCustomer.requestAssistance();
+		fakeEmployee.clearCustomerRequest(fakeCustomer);
+		
 		System.out.println("Checking out beer: ");
 		scanningArea.checkoutProduct(fakeOrder, fakeBeer, fakeEmployee, fakeCustomer);
 		baggingArea.alertCustomer(fakeBeer, 19.56);
 		baggingArea.alertCustomer(fakeBeer, 20);
 		System.out.println();
+		
 
 		for(Product item : fakeOrder.getProducts()) {
 			System.out.println(item);
@@ -65,7 +70,8 @@ public class SelfCheckoutClient {
 		fakeCustomer.setPhoneNumber("425-555-2323");
 		fakeCustomer.setAge(36);
 		fakeCustomer.setTotalRewardPoints(100);
-		System.out.println(fakeCustomer);
+		//each time newCustomer is called a new instance of a date is generated
+		System.out.println(fakeCustomer + " Date added: " + fakeCustomer.getDateAdded());
 		System.out.println("Age: " + fakeCustomer.getAge() + " Address: " + fakeCustomer.getAddress());
 		return fakeCustomer;
 	}
