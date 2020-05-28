@@ -41,9 +41,20 @@ public class SelfCheckoutClient {
 		scanningArea.checkoutProduct(fakeOrder, fakeBeer, fakeEmployee, fakeCustomer);
 		baggingArea.alertCustomer(fakeBeer, 19.56);
 		baggingArea.alertCustomer(fakeBeer, 20);
+		System.out.println("Checking out 2nd 6 pack of beer: ");
+		scanningArea.checkoutProduct(fakeOrder, fakeBeer, fakeEmployee, fakeCustomer);
+		baggingArea.alertCustomer(fakeBeer, 20);
 		System.out.println();
 		
 
+		for(Product item : fakeOrder.getProducts()) {
+			System.out.println(item);
+		}
+		
+		fakeEmployee.removeSaleProduct(fakeOrder, fakeBeer);
+		System.out.println();
+		
+		System.out.println("After last 6 pack removed: ");
 		for(Product item : fakeOrder.getProducts()) {
 			System.out.println(item);
 		}
@@ -61,6 +72,11 @@ public class SelfCheckoutClient {
 		System.out.println("Total: $" + fakeOrder.getTotal());
 		
 		System.out.println("After payment: $" + fakeCustomer.payTotalDue(fakeOrder.getTotal(), 119.93));
+		
+		System.out.println();
+		fakeEmployee.removeOrder(fakeOrder);
+		System.out.println("After order items deletion: ");
+		System.out.println(fakeOrder.getProducts());
 		
 	}
 	

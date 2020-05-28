@@ -84,4 +84,12 @@ public class Sale {
 		return "Order Number: " + this.saleID;
 	}
 	
+	public void removeItem(int productIndex) {
+		this.products.remove(productIndex);
+	}
+	
+	public void removeAllItems() {
+		this.products.clear();
+	}
+	
 }
