@@ -32,6 +32,7 @@ public class SelfCheckoutClient {
 		baggingArea.alertCustomer(fakeMeat, 1.5);
 		System.out.println("Checking out tomatoes: ");
 		scanningArea.checkoutProduct(fakeOrder, fakeVeggie);
+		baggingArea.alertCustomer(fakeVeggie, 4);
 		System.out.println("Checking out beer: ");
 		scanningArea.checkoutProduct(fakeOrder, fakeBeer, fakeEmployee, fakeCustomer);
 		baggingArea.alertCustomer(fakeBeer, 19.56);
