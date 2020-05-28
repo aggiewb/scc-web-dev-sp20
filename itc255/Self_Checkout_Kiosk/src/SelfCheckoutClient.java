@@ -37,8 +37,13 @@ public class SelfCheckoutClient {
 		baggingArea.alertCustomer(fakeBeer, 19.56);
 		baggingArea.alertCustomer(fakeBeer, 20);
 		System.out.println();
-		System.out.println(fakeOrder.getProducts());
+
+		for(Product item : fakeOrder.getProducts()) {
+			System.out.println(item);
+		}
 		
+		System.out.println();
+		System.out.println("Sale ID: " + fakeOrder.getSaleID());
 		fakeOrder.setSubTotal();
 		System.out.println("Subtotal: $" + fakeOrder.getSubTotal());
 		System.out.println("Tax Percent: " + fakeOrder.getTaxRate() + "%");
