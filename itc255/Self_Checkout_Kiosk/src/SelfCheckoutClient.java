@@ -32,12 +32,31 @@ public class SelfCheckoutClient {
 		baggingArea.alertCustomer(fakeMeat, 1.5);
 		System.out.println("Checking out tomatoes: ");
 		scanningArea.checkoutProduct(fakeOrder, fakeVeggie);
+		baggingArea.alertCustomer(fakeVeggie, 4);
 		System.out.println("Checking out beer: ");
 		scanningArea.checkoutProduct(fakeOrder, fakeBeer, fakeEmployee, fakeCustomer);
 		baggingArea.alertCustomer(fakeBeer, 19.56);
 		baggingArea.alertCustomer(fakeBeer, 20);
 		System.out.println();
-		System.out.println(fakeOrder.getProducts());
+
+		for(Product item : fakeOrder.getProducts()) {
+			System.out.println(item);
+		}
+		
+		System.out.println();
+		System.out.println("Sale ID: " + fakeOrder.getSaleID());
+		fakeOrder.setSubTotal();
+		System.out.println("Subtotal: $" + fakeOrder.getSubTotal());
+		System.out.println("Tax Percent: " + fakeOrder.getTaxRate() + "%");
+		fakeOrder.setTotalTax();
+		System.out.println("Total Tax: $" + fakeOrder.getTotalTax());
+		fakeOrder.setDiscount(fakeCustomer);
+		System.out.println("Total Discount: $" + fakeOrder.getDiscount());
+		fakeOrder.setTotal(fakeCustomer);
+		System.out.println("Total: $" + fakeOrder.getTotal());
+		
+		System.out.println("After payment: $" + fakeCustomer.payTotalDue(fakeOrder.getTotal(), 119.93));
+		
 	}
 	
 	public static Customer newCustomer() {
@@ -100,7 +119,7 @@ public class SelfCheckoutClient {
 	}
 	
 	public static RestrictedProduct newBeer() {
-		RestrictedProduct fakeBeer = new RestrictedProduct(987654, "Henry's Hefeweizen", "alcohol", 9.99);
+		RestrictedProduct fakeBeer = new RestrictedProduct(987654, "Henry's Hefeweizen", "alcohol", 100.06);
 		fakeBeer.setAgeLimit(21);
 		fakeBeer.setAmountAvailable(12);
 		fakeBeer.setWeight(20);
