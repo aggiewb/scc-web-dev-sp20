@@ -12,7 +12,8 @@ public class Palindrome {
 	        nums.add(num);
 	    }
 	    
-	    //Remove items from the stack and queue and compare their values, and setting palidrome to false if there is a mismatch
+	    //Remove items from the stack and queue and compare their values, 
+	    //and setting palidrome to false if there is a mismatch
 	    //Stack and queue values in the "same" order but accessed in reverse order
 	    //Add values back into the queue while taking stack values out
 	    boolean palindrome = true;
