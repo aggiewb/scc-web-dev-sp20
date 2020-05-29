@@ -28,7 +28,6 @@ public class Stutter {
 	    //Remove items from queue to stack to put them back in the original order in the stack
 	    while(!temp.isEmpty()){
 	        nums.push(temp.remove());
-	    }
-	    
+	    }    
 	}
 }

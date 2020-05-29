@@ -25,8 +25,6 @@ public class Palindrome {
 	        }
 	        nums.add(num);
 	    }
-	    
 	    return palindrome;
 	}
-
 }
