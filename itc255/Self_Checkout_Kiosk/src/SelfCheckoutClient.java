@@ -68,7 +68,7 @@ public class SelfCheckoutClient {
 		System.out.println("Total Tax: $" + fakeOrder.getTotalTax());
 		fakeOrder.setDiscount(fakeCustomer);
 		System.out.println("Total Discount: $" + fakeOrder.getDiscount());
-		fakeOrder.setTotal(fakeCustomer);
+		fakeOrder.setTotal();
 		System.out.println("Total: $" + fakeOrder.getTotal());
 		
 		System.out.println("After payment: $" + fakeCustomer.payTotalDue(fakeOrder.getTotal(), 119.93));
