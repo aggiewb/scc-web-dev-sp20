@@ -61,8 +61,8 @@ public class Sale {
 		return this.subTotal.setScale(2, RoundingMode.HALF_UP);
 	}
 	
-	public void setTotal(Customer name) {
-		this.total = totalTax.add(this.subTotal.subtract(this.discount));
+	public void setTotal() {
+		this.total = this.totalTax.add(this.subTotal.subtract(this.discount));
 	}
 	
 	public BigDecimal getTotal() {
