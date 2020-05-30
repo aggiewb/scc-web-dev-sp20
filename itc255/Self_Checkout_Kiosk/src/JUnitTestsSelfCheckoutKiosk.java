@@ -69,6 +69,45 @@ class JUnitTestsSelfCheckoutKiosk {
 		assertEquals(testMoney, testOrder.getTotal());
 	}
 	
+	@Test 
+	void testPayAllTotalDue() {
+		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
+		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Sale testOrder = new Sale(2);
+		Customer testCustomer = new Customer("Test", "Bob", "test@example.com");
+		testCustomer.setTotalRewardPoints(500);
+		Scan scanArea = new Scan();
+		scanArea.checkoutProduct(testOrder, testMilk);
+		scanArea.checkoutProduct(testOrder, testBeef);
+		double customerPayment = 9.13;
+		BigDecimal remainder = new BigDecimal(0.00).setScale(2, RoundingMode.HALF_UP);
+		testOrder.setSubTotal();
+		testOrder.setTotalTax();
+		testOrder.setDiscount(testCustomer);
+		testOrder.setTotal();
+		assertEquals(remainder, testCustomer.payTotalDue(testOrder.getTotal(), customerPayment));
+	}
+	
+	@Test 
+	void testPaySomeTotalDue() {
+		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
+		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Sale testOrder = new Sale(2);
+		Customer testCustomer = new Customer("Test", "Bob", "test@example.com");
+		testCustomer.setTotalRewardPoints(500);
+		Scan scanArea = new Scan();
+		scanArea.checkoutProduct(testOrder, testMilk);
+		scanArea.checkoutProduct(testOrder, testBeef);
+		double customerPayment = 4.13;
+		BigDecimal remainder = new BigDecimal(5.00).setScale(2, RoundingMode.HALF_UP);
+		testOrder.setSubTotal();
+		testOrder.setTotalTax();
+		testOrder.setDiscount(testCustomer);
+		testOrder.setTotal();
+		assertEquals(remainder, testCustomer.payTotalDue(testOrder.getTotal(), customerPayment));
+	}
+	
+
 	@Test
 	void testRemoveItem() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
@@ -133,26 +172,16 @@ class JUnitTestsSelfCheckoutKiosk {
 	void testBagMeasuredWeightEqualsProductSetWeight() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
 		testMilk.setWeight(8.6);
-		RestrictedProduct testBeer = new RestrictedProduct(456, "testBeer", "alcohol", 9.51);
 		Bag baggingArea = new Bag();
-		testBeer.setWeight(20);
 		assertEquals("Scan next item.", baggingArea.alertCustomer(testMilk, 8.6));
-		assertEquals("Scan next item.", baggingArea.alertCustomer(testBeer, 20));
 	}
 	
 	@Test
 	void testBagMeasuredWeightNotEqualsProductSetWeight() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
 		testMilk.setWeight(8.6);
-		RestrictedProduct testBeer = new RestrictedProduct(456, "testBeer", "alcohol", 9.51);
 		Bag baggingArea = new Bag();
-		testBeer.setWeight(20);
 		assertEquals("Remove product from bagging area and try again.", baggingArea.alertCustomer(testMilk, 8.5));
-		assertEquals("Remove product from bagging area and try again.", baggingArea.alertCustomer(testBeer, 19));
 	}
 	
-	
-
-
-
 }
