@@ -58,7 +58,7 @@ public class Sale {
 	}
 	
 	public BigDecimal getSubTotal() {
-		return this.subTotal.setScale(2);
+		return this.subTotal.setScale(2, RoundingMode.HALF_UP);
 	}
 	
 	public void setTotal(Customer name) {
