@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
-class SaleTest {
+class JUnitTestsSelfCheckoutKiosk {
 
 	@Test
 	void testSubtotal() {
