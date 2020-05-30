@@ -163,7 +163,7 @@ class JUnitTestsSelfCheckoutKiosk {
 		testBeer.setAgeLimit(21);
 		Employee testEmployee = new Employee("Test", "Bobby", "test-worker@example.com");
 		Customer testCustomer = new Customer("Test", "Bob", "test@example.com");
-		testEmployee.setRestrictedItemAuth(false);
+		testEmployee.setRestrictedItemAuth(true);
 		testCustomer.setAge(16);
 		assertEquals(false, testEmployee.approveRestricted(testBeer, testCustomer));
 	}
