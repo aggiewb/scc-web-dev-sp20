@@ -2,6 +2,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
@@ -63,5 +64,33 @@ class SaleTest {
 		testOrder.setTotal();
 		assertEquals(testMoney, testOrder.getTotal());
 	}
+	
+	@Test
+	void testRemoveItem() {
+		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
+		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Employee testEmployee = new Employee("Test", "Bobby", "test-worker@example.com");
+		ArrayList<Product> testOrderList = new ArrayList<>();
+		testOrderList.add(testBeef);
+		Sale testOrder = new Sale(2);
+		testOrder.setProduct(testMilk);
+		testOrder.setProduct(testBeef);
+		testEmployee.removeSaleProduct(testOrder, testMilk);
+		assertEquals(testOrderList, testOrder.getProducts());
+	}
+	
+	@Test
+	void testRemoveOrder() {
+		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
+		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Employee testEmployee = new Employee("Test", "Bobby", "test-worker@example.com");
+		ArrayList<Product> testOrderList = new ArrayList<>();
+		Sale testOrder = new Sale(2);
+		testOrder.setProduct(testMilk);
+		testOrder.setProduct(testBeef);
+		testEmployee.removeOrder(testOrder);
+		assertEquals(testOrderList, testOrder.getProducts());
+	}
+
 
 }
