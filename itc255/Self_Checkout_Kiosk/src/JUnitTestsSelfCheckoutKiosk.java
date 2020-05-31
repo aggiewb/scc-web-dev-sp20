@@ -11,7 +11,7 @@ class JUnitTestsSelfCheckoutKiosk {
 	@Test
 	void testSubtotal() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
-		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Product testBeef = new Product(456, "testBeef", "meat", 9.51);
 		Sale testOrder = new Sale(2);
 		Scan scanArea = new Scan();
 		scanArea.checkoutProduct(testOrder, testMilk);
@@ -24,7 +24,7 @@ class JUnitTestsSelfCheckoutKiosk {
 	@Test 
 	void testTotalTax() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
-		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Product testBeef = new Product(456, "testBeef", "meat", 9.51);
 		Sale testOrder = new Sale(2);
 		Scan scanArea = new Scan();
 		scanArea.checkoutProduct(testOrder, testMilk);
@@ -38,7 +38,7 @@ class JUnitTestsSelfCheckoutKiosk {
 	@Test 
 	void testTotalDiscount() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
-		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Product testBeef = new Product(456, "testBeef", "meat", 9.51);
 		Sale testOrder = new Sale(2);
 		Customer testCustomer = new Customer("Test", "Bob", "test@example.com");
 		testCustomer.setTotalRewardPoints(500);
@@ -54,7 +54,7 @@ class JUnitTestsSelfCheckoutKiosk {
 	@Test 
 	void testTotal() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
-		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Product testBeef = new Product(456, "testBeef", "meat", 9.51);
 		Sale testOrder = new Sale(2);
 		Customer testCustomer = new Customer("Test", "Bob", "test@example.com");
 		testCustomer.setTotalRewardPoints(500);
@@ -72,7 +72,7 @@ class JUnitTestsSelfCheckoutKiosk {
 	@Test 
 	void testPayAllTotalDue() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
-		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Product testBeef = new Product(456, "testBeef", "meat", 9.51);
 		Sale testOrder = new Sale(2);
 		Customer testCustomer = new Customer("Test", "Bob", "test@example.com");
 		testCustomer.setTotalRewardPoints(500);
@@ -91,7 +91,7 @@ class JUnitTestsSelfCheckoutKiosk {
 	@Test 
 	void testPaySomeTotalDue() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
-		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Product testBeef = new Product(456, "testBeef", "meat", 9.51);
 		Sale testOrder = new Sale(2);
 		Customer testCustomer = new Customer("Test", "Bob", "test@example.com");
 		testCustomer.setTotalRewardPoints(500);
@@ -111,7 +111,7 @@ class JUnitTestsSelfCheckoutKiosk {
 	@Test
 	void testRemoveItem() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
-		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Product testBeef = new Product(456, "testBeef", "meat", 9.51);
 		Employee testEmployee = new Employee("Test", "Bobby", "test-worker@example.com");
 		ArrayList<Product> testOrderList = new ArrayList<>();
 		testOrderList.add(testBeef);
@@ -125,7 +125,7 @@ class JUnitTestsSelfCheckoutKiosk {
 	@Test
 	void testRemoveOrder() {
 		Product testMilk = new Product(123, "testMilk", "dairy", 2.50);
-		Product testBeef = new Product(456, "testBeef", "dairy", 9.51);
+		Product testBeef = new Product(456, "testBeef", "meat", 9.51);
 		Employee testEmployee = new Employee("Test", "Bobby", "test-worker@example.com");
 		ArrayList<Product> testOrderList = new ArrayList<>();
 		Sale testOrder = new Sale(2);
