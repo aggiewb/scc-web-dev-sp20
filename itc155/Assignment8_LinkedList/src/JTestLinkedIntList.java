@@ -6,7 +6,8 @@ class JTestLinkedIntList {
 
 	@Test
 	void testEmptyTrue() {
-		fail("Not yet implemented");
+		LinkedIntList list = new LinkedIntList();
+		assertTrue(list.isSorted());
 	}
 	
 	void testFullTrue() {
