@@ -37,6 +37,16 @@ class JTestLinkedIntList {
 	
 	@Test
 	void testFullFalse() {
-		fail("Not yet implemented");
+		LinkedIntList list = new LinkedIntList();
+		list.add(-3);
+		list.add(1);
+		list.add(5);
+		list.add(5);
+		list.add(8);
+		list.add(17);
+		list.add(15);
+		list.add(42);
+		list.add(87);
+		assertFalse(list.isSorted());
 	}
 }
