@@ -1,0 +1,41 @@
+body, input[type="submit"]{
+    background-color: #BDE0BD;
+    color: #47412A;
+}
+
+body{
+    font-size: 26px;
+    font-family: 'Arvo', serif;
+}
+
+p, input[type="submit"] {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    color: #5603AD;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+input {
+    display: block;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    border: 3px solid #47412A;
+}
+
+input[type="submit"]:hover {
+    background-color: #60BB60;
+    color: #1E1B10;
+    cursor: pointer;
+}
