@@ -19,11 +19,12 @@ public class LinkedIntList {
 	}
 	
 	public boolean isSorted(){
-	    while(front != null && front.next != null){
-	        if(front.data > front.next.data){
+		ListNode current = front;
+	    while(current != null && current.next != null){
+	        if(current.data > current.next.data){
 	            return false;
 	        }
-	        front = front.next;
+	        current = current.next;
 	    }
 	    return true;
 	}
