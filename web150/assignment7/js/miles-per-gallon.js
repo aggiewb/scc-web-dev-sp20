@@ -3,9 +3,9 @@ document.getElementById('miles-per-gallon').disabled = true;
 
 //Add a function that calculates a user's miles per gallon according to their form inputs
 function calculateMilesPerGallon(event){
-    var miles = event.target.querySelector('#miles').value;
-    var gallons = event.target.querySelector('#gallons').value;
-    event.target.querySelector('#miles-per-gallon').value = miles / gallons;
+    var miles = parseInt(event.target.querySelector('#miles').value);
+    var gallons = parseInt(event.target.querySelector('#gallons').value);
+    event.target.querySelector('#miles-per-gallon').value = (miles / gallons).toFixed(1);
     event.preventDefault();
 }
 
