@@ -20,7 +20,7 @@ public class LinkedIntList {
 	
 	public boolean isSorted(){
 		ListNode current = front;
-	    while(current != null && current.next != null){
+		while(current != null && current.next != null){
 	        if(current.data > current.next.data){
 	            return false;
 	        }
