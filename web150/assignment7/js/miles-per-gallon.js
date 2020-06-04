@@ -1,4 +1,4 @@
-//Disable input element so that it can be used to output miles per gallons to user
+//Disable input element so that it can be used to output miles per gallon to user
 document.getElementById('miles-per-gallon').disabled = true;
 
 //A function that calculates a user's miles per gallon according to their form inputs
@@ -10,6 +10,7 @@ function calculateMilesPerGallon(event){
 }
 
 //A function that will validate whether the user has entered a valid number and provides a warning if not
+//It also removes the warning when the used has entered a valid number
 function validateForm(event){
     if(isNaN(event.target.value) || event.target.value === ''){
        event.target.nextElementSibling.textContent = "Please enter a valid number.";
