@@ -2,6 +2,7 @@
 document.getElementById('miles-per-gallon').disabled = true;
 
 //A function that calculates a user's miles per gallon according to their form inputs
+//The calculated amount is then set to display in the disabled form input #miles-per-gallon
 function calculateMilesPerGallon(event){
     var miles = parseInt(event.target.querySelector('#miles').value);
     var gallons = parseInt(event.target.querySelector('#gallons').value);
