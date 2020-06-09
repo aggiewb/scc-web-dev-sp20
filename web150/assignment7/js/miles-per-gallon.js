@@ -15,6 +15,7 @@ function calculateMilesPerGallon(event){
 function validateForm(event){
     if(isNaN(event.target.value) || event.target.value === ''){
        event.target.nextElementSibling.textContent = "Please enter a valid number.";
+       event.target.value = '';
     } else {
         event.target.nextElementSibling.textContent = "";
     }
