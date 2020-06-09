@@ -13,11 +13,12 @@ function calculateMilesPerGallon(event){
 //A function that will validate whether the user has entered a valid number and provides a warning if not
 //It also removes the warning when the used has entered a valid number
 function validateForm(event){
+    var input = event.target;
     if(isNaN(event.target.value) || event.target.value === ''){
-       event.target.nextElementSibling.textContent = "Please enter a valid number.";
-       event.target.value = '';
+        input.nextElementSibling.textContent = "Please enter a valid number.";
+        input.value = '';
     } else {
-        event.target.nextElementSibling.textContent = "";
+        input.nextElementSibling.textContent = "";
     }
 }
 
