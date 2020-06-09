@@ -6,9 +6,10 @@ class JTestIntTree {
 
 	@Test
 	void testNullRoot() {
-		fail("Not yet implemented");
+		IntTree testTree = new IntTree();
+		assertEquals(1, testTree.countEmpty());
 	}
-	
+
 	@Test
 	void testOnlyRoot() {
 		fail("Not yet implemented");
