@@ -6,6 +6,21 @@ public class IntTree {
 		overallRoot = null;
 	}
 	
+	public void add(int value) {
+		overallRoot = add(overallRoot, value);
+	}
+	
+	private IntTreeNode add(IntTreeNode root, int value) {
+		if(root == null) {
+			root = new IntTreeNode(value);
+		} else if(value <= root.data) {
+			root.left = add(root.left, value);
+		} else {
+			root.right = add(root.right, value);
+		}
+		return root;
+	}
+	
 	public int countEmpty(){
 	    return countEmpty(overallRoot);
 	}
