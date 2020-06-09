@@ -12,7 +12,9 @@ class JTestIntTree {
 
 	@Test
 	void testOnlyRoot() {
-		fail("Not yet implemented");
+		IntTree testTree = new IntTree();
+		testTree.add(23);
+		assertEquals(2, testTree.countEmpty());
 	}
 
 	@Test
