@@ -17,22 +17,17 @@ class JTestIntTree {
 		assertEquals(2, testTree.countEmpty());
 	}
 
-	@Test
-	void testMultipleLeftEmpty() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testMultipleRightEmpty() {
-		fail("Not yet implemented");
-	}
 	
 	@Test
-	void testEqualLeftRightEmpty() {
+	void testMultipleNodes() {
 		IntTree testTree = new IntTree();
-		for(int i = 1; i < 16; i++) {
-			testTree.add(i);
-		}
-		assertEquals(16, testTree.countEmpty());
+		testTree.add(3);
+		testTree.add(1);
+		testTree.add(2);
+		testTree.add(4);
+		testTree.add(5);
+		testTree.add(6);
+
+		assertEquals(7, testTree.countEmpty());
 	}
 }
