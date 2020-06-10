@@ -13,5 +13,4 @@ public class IntTreeNode {
 		this.left = left;
 		this.right = right;
 	}
-
 }
