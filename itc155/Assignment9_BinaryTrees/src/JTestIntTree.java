@@ -17,7 +17,6 @@ class JTestIntTree {
 		assertEquals(2, testTree.countEmpty());
 	}
 
-	
 	@Test
 	void testMultipleNodes() {
 		IntTree testTree = new IntTree();
