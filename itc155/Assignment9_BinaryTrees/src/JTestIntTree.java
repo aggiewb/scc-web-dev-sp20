@@ -29,6 +29,10 @@ class JTestIntTree {
 	
 	@Test
 	void testEqualLeftRightEmpty() {
-		fail("Not yet implemented");
+		IntTree testTree = new IntTree();
+		for(int i = 1; i < 16; i++) {
+			testTree.add(i);
+		}
+		assertEquals(16, testTree.countEmpty());
 	}
 }
