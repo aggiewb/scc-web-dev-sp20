@@ -27,7 +27,6 @@ class JTestIntTree {
 		testTree.add(4);
 		testTree.add(5);
 		testTree.add(6);
-
 		assertEquals(7, testTree.countEmpty());
 	}
 }
