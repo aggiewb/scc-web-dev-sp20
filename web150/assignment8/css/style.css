@@ -1,0 +1,36 @@
+html { 
+    width:100%; 
+    height:100%; 
+    background:url("../media/grass.png") center no-repeat;
+}
+
+body {
+    font-family: 'Niconne', cursive;
+    color: #9A7AA0;
+    text-align: center;
+ }
+
+ h1 {
+     font-size: 60px;
+ }
+
+ p {
+     font-size: 30px;
+ }
+
+ #flowers {
+     background-color: #D9DCE8;
+     width: 70%;
+     height: 30%;
+     border: 5px double #9A7AA0;
+     /* position div at the bottom of the page */
+     position: fixed;
+     bottom: 0;
+     /* center div */
+     left: 50%;
+     transform: translateX(-50%);
+     /* center imgs */
+     display: flex;
+     flex-flow: nowrap;
+     align-items: center;
+ }
