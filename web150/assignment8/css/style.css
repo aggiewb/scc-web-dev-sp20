@@ -34,3 +34,7 @@ body {
      flex-flow: nowrap;
      align-items: center;
  }
+
+ img {
+     max-width: 16%;
+ }
