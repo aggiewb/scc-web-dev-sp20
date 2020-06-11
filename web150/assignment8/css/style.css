@@ -32,9 +32,10 @@ body {
      /* center imgs */
      display: flex;
      flex-flow: nowrap;
+     justify-content: center;
      align-items: center;
  }
 
  img {
-     max-width: 16%;
+     max-width: 16.67%;
  }
