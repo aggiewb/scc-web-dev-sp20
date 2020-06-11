@@ -80,21 +80,33 @@ class JTestFinal {
 	
 	@Test
 	void testConsecutiveListTrue() {
-		fail("Not yet implemented");
+		LinkedIntList testList = new LinkedIntList();
+		testList.add(1);
+		testList.add(2);
+		testList.add(3);
+		testList.add(1);
+		assertTrue(testList.hasTwoConsecutive());
 	}
 	
 	@Test
 	void testConsecutiveListFalse() {
-		fail("Not yet implemented");
+		LinkedIntList testList = new LinkedIntList();
+		testList.add(0);
+		testList.add(12);
+		testList.add(-3);
+		assertFalse(testList.hasTwoConsecutive());
 	}
 	
 	@Test
 	void testConsecutiveListOneNode() {
-		fail("Not yet implemented");
+		LinkedIntList testList = new LinkedIntList();
+		testList.add(23);
+		assertFalse(testList.hasTwoConsecutive());
 	}
 	
 	@Test
 	void testConsecutiveListEmpty() {
-		fail("Not yet implemented");
+		LinkedIntList testList = new LinkedIntList();
+		assertFalse(testList.hasTwoConsecutive());
 	}
 }
