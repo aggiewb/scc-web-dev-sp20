@@ -9,7 +9,7 @@ public class StackQueue {
 	        isEqual = false;
 	        return isEqual;
 	    } else {
-	        while(!firstNums.isEmpty() && !secondNums.isEmpty()){
+	        while(!firstNums.isEmpty()){
 	            int firstNum = firstNums.pop();
 	            int secondNum = secondNums.pop();
 	            if(firstNum != secondNum){
