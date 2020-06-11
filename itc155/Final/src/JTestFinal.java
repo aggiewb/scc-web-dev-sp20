@@ -109,4 +109,46 @@ class JTestFinal {
 		LinkedIntList testList = new LinkedIntList();
 		assertFalse(testList.hasTwoConsecutive());
 	}
+	
+	@Test
+	void testNullTree() {
+		IntTree testTree = new IntTree();
+		assertTrue(testTree.isFull());
+	}
+	
+	@Test
+	void testOnlyRootTree() {
+		IntTree testTree = new IntTree();
+		testTree.add(23);
+		assertTrue(testTree.isFull());
+	}
+	
+	@Test
+	void testTreeTrue() {
+		IntTree testTree = new IntTree();
+		testTree.add(2);
+		testTree.add(1);
+		testTree.add(3);
+		assertTrue(testTree.isFull());
+	}
+	
+	@Test
+	void testTreeFalseLeft() {
+		IntTree testTree = new IntTree();
+		testTree.add(2);
+		testTree.add(1);
+		testTree.add(3);
+		testTree.add(7);
+		assertFalse(testTree.isFull());
+	}
+	
+	@Test
+	void testTreeFalseRight() {
+		IntTree testTree = new IntTree();
+		testTree.add(2);
+		testTree.add(1);
+		testTree.add(3);
+		testTree.add(0);
+		assertFalse(testTree.isFull());
+	}
 }
