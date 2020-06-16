@@ -35,7 +35,6 @@ function elementsToHide(){
     $newPElement.hide().prependTo($("body"));
 }
 
-
 $("img").draggable();
 elementsToHide();
 $("#flowers").on("mousedown", transition);
