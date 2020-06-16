@@ -28,10 +28,10 @@ function resetFlowers(){
 //A function that creates/hides html elements to later show during transition()
 function elementsToHide(){
     var $newPElement = $('<p id="copyright">Aggie Wheeler Bateman &copy 2020 <a href="https://www.aggiewheelerbateman.com" target="_blank">Personal Portfolio</a></p>');
-    var $buttonElement = $("button");
+    var $buttonElement = $('<button>Reset flowers</button>');
     
     $buttonElement.button();
-    $buttonElement.hide().button();
+    $buttonElement.hide().prependTo($("body"));
     $newPElement.hide().prependTo($("body"));
 }
 
