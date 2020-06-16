@@ -1,6 +1,7 @@
 //This assignment demonstrates the use of a few jQuery effects and an interaction.
 
-//A function that creates new p element to prependTo() the body and then show() after h1 and p tag user instructions have fadedOut().
+//A function that which show() after h1 and p tag user instructions have fadedOut(), 
+//and removes mousedown event listener from #flowers div.
 function transition(){
     $("#flowers").off("mousedown");
 
@@ -34,10 +35,9 @@ function elementsToHide(){
     $newPElement.hide().prependTo($("body"));
 }
 
-
-
 //Add draggable() functionality to all images
 $("img").draggable();
+
 elementsToHide();
 $("#flowers").on("mousedown", transition);
 resetFlowers();
