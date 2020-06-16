@@ -35,9 +35,8 @@ function elementsToHide(){
     $newPElement.hide().prependTo($("body"));
 }
 
-//Add draggable() functionality to all images
-$("img").draggable();
 
+$("img").draggable();
 elementsToHide();
 $("#flowers").on("mousedown", transition);
 resetFlowers();
