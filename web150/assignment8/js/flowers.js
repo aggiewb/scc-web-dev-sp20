@@ -1,4 +1,4 @@
-//This assignment demonstrates the use of a few jQuery effects and an interaction.
+//This assignment demonstrates the use of a few jQuery effects, an interaction, and a widget.
 
 //A function that which show() after h1 and p tag user instructions have fadedOut(), 
 //and removes mousedown event listener from #flowers div.
